@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.css";
 
-function Account() {
+function Home() {
   return (
     <article>
-      <h1>This is Contacts page.</h1>
+      <h1>This is home page.</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex pariatur
         voluptatum doloribus enim repudiandae ullam sequi quo suscipit voluptas
@@ -14,4 +15,4 @@ function Account() {
   );
 }
 
-export default Account;
+export default Home;

@@ -11,12 +11,22 @@
     right: 0;
 }
 
-.Nav ul, li {
+.Nav ul,
+li {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
+.NavLink .Logo {
+    font-size: 1.3rem;
+    letter-spacing: .1em;
+    color: black;
+    padding: 0rem;
+    text-decoration: none;
+}
 
-
+.Logo:hover {
+    background-color: transparent;
+}

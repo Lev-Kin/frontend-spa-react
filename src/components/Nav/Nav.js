@@ -1,3 +1,5 @@
+import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import Logo from "../Logo/Logo";
 import NavItem from "./NavItem/NavItem";
@@ -11,14 +13,14 @@ function Nav() {
         <NavItem url="/delivery">Delivery</NavItem>
         <NavItem url="/location">Location</NavItem>
       </ul>
-      <NavItem url="/" className="Logo">
+      <NavLink to="/" className="Logo">
         <Logo />
-      </NavItem>
+      </NavLink>
       <ul>
         <NavItem url="/about">About</NavItem>
         <NavItem url="/unveil">Unveil</NavItem>
         <NavItem url="/account">Contacts</NavItem>
-        <NavItem url="/">Search</NavItem>
+        <NavItem url="/search">Search</NavItem>
       </ul>
     </nav>
   );

@@ -10,6 +10,7 @@ import SpecialDays from "./pages/SpecialDays";
 import Delivery from "./pages/Delivery";
 import Location from "./pages/Location";
 import Unveil from "./pages/Unveil";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/location" element={<Location />} />
         <Route path="/unveil" element={<Unveil />} />
+        <Route path="/" element={<Home />} />
       </Routes>
 
       <Footer />

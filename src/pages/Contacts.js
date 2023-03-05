@@ -1,6 +1,7 @@
 import React from "react";
+import "./style.css";
 
-function Account() {
+function Contacts() {
   return (
     <article>
       <h1>This is contacts page.</h1>
@@ -14,4 +15,4 @@ function Account() {
   );
 }
 
-export default Account;
+export default Contacts;
