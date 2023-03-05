@@ -3,11 +3,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: wheat;
-    color: black;
     padding: 0 1.5rem;
-    font-size: 1.3rem;
-    letter-spacing: .1em;
-    font-family: 'Courier New', Courier, monospace;
 
     position: sticky;
     top: 0;
@@ -22,14 +18,7 @@
     display: flex;
 }
 
-.Nav a {
-    display: block;
-    padding: 1rem;
-    color: black;
-    font-size: 1rem;
-    text-decoration: none;
+.Nav li {
+    list-style-type: none; /* Убираем маркеры */
 }
 
-.Nav a:hover {
-    background-color: rgba(0, 0, 0, .1);
-}

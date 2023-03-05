@@ -1,7 +1,7 @@
 import "./Header.css";
 import headerImage from "../../assets/header-img1.jpg";
 
-function Header(props) {
+function Header() {
   const style = {
     backgroundImage: `url(${headerImage})`,
   };

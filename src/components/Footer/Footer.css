@@ -1,6 +1,6 @@
 .Footer {
     background-color: black;
-    color: grey;
+    color: wheat;
     padding: 1rem;
     text-align: center;
 }
@@ -10,5 +10,5 @@ p {
 }
 
 a {
-    color: grey;
+    color: gray;
 }
