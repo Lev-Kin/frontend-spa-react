@@ -1,10 +1,15 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Nav from "./components/Nav/Nav";
-import About from "./pages/About";
-import Account from "./pages/Account";
 import Shop from "./pages/Shop";
-import { Route, Routes } from "react-router-dom";
+import Account from "./pages/Contacts";
+import About from "./pages/About";
+import SpecialDays from "./pages/SpecialDays";
+import Delivery from "./pages/Delivery";
+import Location from "./pages/Location";
+import Unveil from "./pages/Unveil";
 
 function App() {
   return (
@@ -16,6 +21,10 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/account" element={<Account />} />
         <Route path="/about" element={<About />} />
+        <Route path="/specialdays" element={<SpecialDays />} />
+        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/location" element={<Location />} />
+        <Route path="/unveil" element={<Unveil />} />
       </Routes>
 
       <Footer />

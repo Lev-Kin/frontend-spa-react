@@ -7,17 +7,17 @@ function Nav() {
     <nav className="Nav">
       <ul>
         <NavItem url="/shop">Shop</NavItem>
-        <NavItem url="/">Special days</NavItem>
-        <NavItem url="/">Delivery</NavItem>
-        <NavItem url="/">Location</NavItem>
+        <NavItem url="/specialdays">Special days</NavItem>
+        <NavItem url="/delivery">Delivery</NavItem>
+        <NavItem url="/location">Location</NavItem>
       </ul>
-      <NavItem url="/">
+      <NavItem url="/" className="Logo">
         <Logo />
       </NavItem>
       <ul>
         <NavItem url="/about">About</NavItem>
-        <NavItem url="/">Discover</NavItem>
-        <NavItem url="/account">Account</NavItem>
+        <NavItem url="/unveil">Unveil</NavItem>
+        <NavItem url="/account">Contacts</NavItem>
         <NavItem url="/">Search</NavItem>
       </ul>
     </nav>

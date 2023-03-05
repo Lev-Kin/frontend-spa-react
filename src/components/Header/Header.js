@@ -1,3 +1,4 @@
+import React from "react";
 import "./Header.css";
 import headerImage from "../../assets/header-img1.jpg";
 
