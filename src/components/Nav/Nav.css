@@ -1,18 +1,15 @@
 .Nav {
+    background-color: wheat;
+    padding: 0 1.5rem;
+}
+
+.Nav .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: wheat;
-    padding: 0 1.5rem;
-
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
-.Nav ul,
-li {
+.Nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -20,13 +17,28 @@ li {
 }
 
 .NavLink .Logo {
-    font-size: 1.3rem;
-    letter-spacing: .1em;
     color: black;
-    padding: 0rem;
     text-decoration: none;
 }
 
-.Logo:hover {
-    background-color: transparent;
+.Nav .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.Nav .searchIcon {
+    width: 15px;
+    padding: .9rem;
+}
+
+.Nav .cartIcon {
+    width: 14px;
+    padding: .9rem;
+}
+
+.Nav .userIcon {
+    width: 14px;
+    padding: .9rem;
 }

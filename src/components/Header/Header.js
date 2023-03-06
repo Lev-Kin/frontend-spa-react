@@ -5,6 +5,7 @@ import headerImage from "../../assets/header-img1.jpg";
 function Header() {
   const style = {
     backgroundImage: `url(${headerImage})`,
+    backgroundPosition: "top",
   };
 
   return (

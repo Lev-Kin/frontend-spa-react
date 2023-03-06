@@ -4,8 +4,10 @@ import "./Footer.css";
 function Footer(props) {
   return (
     <footer className="Footer">
-      <p>FOOTER</p>
-      <a href="/">luxury clothes</a>
+      <div className="container">
+        <p>FOOTER</p>
+        <a href="/">luxury clothes</a>
+      </div>
     </footer>
   );
 }

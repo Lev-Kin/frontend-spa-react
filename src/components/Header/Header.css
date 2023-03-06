@@ -1,5 +1,5 @@
 .Header {
-    min-height: 50vh;
+    min-height: 60vh;
     background-color: wheat;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     padding: 1rem;
     background-size: cover;
     color: white;
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
 }
 
 .Container {
@@ -21,3 +21,13 @@
     text-transform: uppercase;
     font-family: italic;
 }
+
+.Container p {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.blur {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+

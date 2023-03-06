@@ -3,12 +3,27 @@
     padding: 1rem;
     color: black;
     font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: .1rem;
     text-decoration: none;
     border-bottom: 2px solid transparent;
+    transition: all 0.1s ease-in-out;
 }
 
 .NavItem a:hover {
     background-color: rgba(0, 0, 0, .1);
+    color: #0259aa;
+}
+
+.NavItem>a::before {
+    content: " ";
+    height: 1px;
+    width: 0;
+    background-color: #0b1c2c;
+    position: absolute;
+    bottom: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 .NavItem a.active {
@@ -16,9 +31,11 @@
 }
 
 .Logo {
-    font-size: 1.3rem;
-    letter-spacing: .1em;
-    color: gray;
-    padding: 0rem;
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .2em;
+    color: black;
+    padding: 0;
+    margin: 0;
     text-decoration: none;
 }
