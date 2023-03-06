@@ -2,22 +2,19 @@ import React from "react";
 import "./Header.css";
 import headerImage from "../../assets/header-img1.jpg";
 
-function Header() {
-  const style = {
-    backgroundImage: `url(${headerImage})`,
-    backgroundPosition: "top",
-  };
+function Header({ image, title, children }) {
 
   return (
-    <header className="Header" style={style}>
-      <div className="Container">
-        <h1>
-          To feel confident and elegant.
-          <br />
-          We offer this incredible feeling.
-        </h1>
-        <p>The best luxury quality at any time</p>
-      </div>
+    <header className="Header">
+      <img src={image} alt="img" />
+      <section>
+        <div className="Container">
+          <div className="blur">
+            <h1>{title}</h1>
+            <p>{children}</p>
+          </div>
+        </div>
+      </section>
     </header>
   );
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Header from "./components/Header/Header";
 import Layout from "./components/Layout/Layout";
 import Shop from "./pages/Shop";
 import Account from "./pages/Contacts";
@@ -15,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Layout>
-        <Header />
         <Routes>
           <Route path="/shop" element={<Shop />} />
           <Route path="/account" element={<Account />} />

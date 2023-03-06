@@ -4,10 +4,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
     background-size: cover;
     color: white;
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.Header img {
+    width: 100%;
 }
 
 .Container {
@@ -31,3 +34,33 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.Header {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.Header img {
+    width: 100%;
+    height: 70vh;
+    min-height: 380px;
+    object-fit: cover;
+    object-position: top;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.Header section {
+    position: absolute;
+    bottom: 7rem;
+    right: px;
+    max-width: 500px;
+    margin-left: 2rem;
+
+    padding: 0 2rem 0;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+}
+
+.Header h1 {
+    font-size: 2rem;
+}
