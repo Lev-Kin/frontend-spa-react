@@ -1,6 +1,13 @@
 .ProductList {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 6rem;
+}
+
+@media (max-width: 900px) {
+  .ProductList {
+    padding: 1rem;
+    margin: 0 auto;
   }
+}

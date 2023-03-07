@@ -9,6 +9,7 @@
     left: 0;
     right: 0;
     z-index: 4;
+    transform: translateY(-110%);
     transition: all .5s;
 }
 
@@ -21,8 +22,16 @@
     flex-direction: column;
 }
 
-.Drawer .Nav .logo {
+.Drawer>.content>.Nav>.logo {
     display: none;
+}
+
+.open .content {
+    transform: translateY(0);
+}
+
+.Drawer .Nav .NavItem a {
+    font-size: 1.2rem;
 }
 
 @media (min-width: 900px) {
