@@ -1,3 +1,8 @@
+.NavItem {
+    display: flex;
+    align-items: center;
+}
+
 .NavItem a {
     display: block;
     padding: 1rem;
@@ -7,13 +12,19 @@
     font-weight: 600;
     letter-spacing: 0.1rem;
     text-decoration: none;
+    text-align: center;
     display: inline-block;
     position: relative;
     transition: all 0.1s ease-in-out;
+    border-left: 3px solid transparent;
+}
+
+.NavItem a.active {
+    background-color: rgb(226, 223, 223);
 }
 
 .NavItem a:hover {
-    color:goldenrod;
+    color: goldenrod;
 }
 
 .NavItem a::after {
@@ -26,13 +37,15 @@
     background-color: black;
     transform: scaleX(0);
     transform-origin: bottom left;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .NavItem a:hover::after {
     transform: scaleX(1);
 }
 
-.NavItem a.active {
-    border-color: black;
+@media (max-width: 900px) {
+    .NavItem {
+        justify-content: center;
+    }
 }

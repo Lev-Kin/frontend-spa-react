@@ -1,19 +1,33 @@
 .NavToggle {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png");
-
     display: none;
-
-    padding: 1rem 1.5rem;
-    min-height: 61px;
-
-    vertical-align: middle;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%;
-
+    padding: 0;
+    cursor: pointer;
     background-color: transparent;
-    color: #0b1c2c;
     border: none;
+}
+
+.NavToggle div {
+    width: 25px;
+    height: 2px;
+    margin: 5px;
+    background-color: black;
+}
+
+.NavToggle .line2 {
+    width: 17px;
+    margin: 0 auto;
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
 }
 
 @media (max-width: 900px) {
