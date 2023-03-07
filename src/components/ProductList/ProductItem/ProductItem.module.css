@@ -2,12 +2,13 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
 }
 
 .ProductItem {
     position: relative;
-    flex: 0 0 30%;
+    flex: 0 0 350px;
     margin-bottom: 2rem;
     margin-top: 1rem;
     text-align: center;

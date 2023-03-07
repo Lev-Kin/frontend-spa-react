@@ -1,0 +1,23 @@
+.NavToggle {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png");
+
+    display: none;
+
+    padding: 1rem 1.5rem;
+    min-height: 61px;
+
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+
+    background-color: transparent;
+    color: #0b1c2c;
+    border: none;
+}
+
+@media (max-width: 900px) {
+    .NavToggle {
+        display: inline-block;
+    }
+}
