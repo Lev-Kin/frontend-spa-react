@@ -1,12 +1,8 @@
 import React from "react";
-import "./Logo.css";
+import classes from "./Logo.module.css";
 
 function Logo() {
-  return (
-    <div className="Logo">
-      <a href="/">Luxury Feel</a>
-    </div>
-  );
+  return <div className={classes.Logo}>Luxury Feel</div>;
 }
 
 export default Logo;

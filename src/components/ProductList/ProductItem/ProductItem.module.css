@@ -3,40 +3,54 @@
     object-fit: cover;
     object-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    z-index: 2;
-  }
-  .ProductItem {
+}
+
+.ProductItem {
     position: relative;
     flex: 0 0 30%;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     margin-top: 1rem;
     text-align: center;
-  }
-  .ProductItem a {
-    bottom: -3.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    z-index: 1;
-    
+}
+
+.ProductItem a {
     color: black;
+    margin-top: 15px;
     font-family: 'Libre Baskerville', serif;
     text-transform: lowercase;
     text-decoration: none;
     text-align: center;
-  }
-  .ProductItem .price {
+    transition: .2s ease-in-out;
+}
+
+.ProductItem a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.ProductItem a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.ProductItem .price {
     position: absolute;
     top: -1.5rem;
-    
-    z-index: 3;
-    right: 0;
-    
+    right: -15px;
     background-color: black;
     color: white;
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     padding: 1rem;
     text-align: center;
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-  }
+}

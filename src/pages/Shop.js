@@ -1,17 +1,21 @@
 import React from "react";
-import "./style.css";
+import Header from "../components/Header/Header";
+import headerImage from "../assets/shopHeader-img.jpg";
+import ProductList from "../components/ProductList/ProductList";
+import { getProducts } from "../data/products";
 
 function Shop() {
   return (
-    <article>
-      <h1>This is Shop page.</h1>
-      <p>
+    <>
+      <Header title="Enjoy your Shopping" image={headerImage}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex pariatur
         voluptatum doloribus enim repudiandae ullam sequi quo suscipit voluptas
         id, laboriosam necessitatibus, dolore corrupti. Explicabo iure doloribus
         illum repudiandae tenetur.
-      </p>
-    </article>
+      </Header>
+
+      <ProductList products={getProducts()} />
+    </>
   );
 }
 

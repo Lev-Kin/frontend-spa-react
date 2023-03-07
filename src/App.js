@@ -9,6 +9,8 @@ import Delivery from "./pages/Delivery";
 import Location from "./pages/Location";
 import Unveil from "./pages/Unveil";
 import Home from "./pages/Home";
+import Product from "./pages/Product";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/:productId" element={<Product />} />
           <Route path="/account" element={<Account />} />
           <Route path="/about" element={<About />} />
           <Route path="/specialdays" element={<SpecialDays />} />
@@ -23,6 +26,7 @@ function App() {
           <Route path="/location" element={<Location />} />
           <Route path="/unveil" element={<Unveil />} />
           <Route path="/" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </div>

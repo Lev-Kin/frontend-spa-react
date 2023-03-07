@@ -5,9 +5,9 @@ import classes from "./ProductItem.module.css";
 function ProductItem({ product }) {
   return (
     <div className={classes.ProductItem}>
-      <img src={product.image} alt="/" />
-      <Link to={product.path}>{product.title}</Link>
-      <div className={classes.price}>{product.price}</div>
+      <img src={product.image} alt={product.title} />
+      <Link to={"/shop/" + product.productId}>{product.title}</Link>
+      <div className={classes.price}>{product.price}$</div>
     </div>
   );
 }
