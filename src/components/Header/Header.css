@@ -1,12 +1,12 @@
 .Header {
   min-height: 70vh;
-  background-color: white;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-size: cover;
-  color: white;
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  color: #fff;
+  text-shadow: 0 0 20px rgba(73, 73, 73, 0.6);
   margin-bottom: 2rem;
 }
 
@@ -24,7 +24,7 @@
 
 .Header section .blur {
   padding: 50px;
-  background-color: rgba(255, 255, 255, 0.123);
+  background-color: rgba(14, 14, 14, 0.336);
 }
 
 .Header img {
@@ -49,6 +49,7 @@
 @media (max-width: 900px) {
   .Header section {
     min-width: 200px;
+    left: auto;
   }
 
   .Header section h1 {

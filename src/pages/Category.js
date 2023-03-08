@@ -2,6 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header/Header";
 import { getCategory } from "../data/categories";
+import ProductList from "../components/ProductList/ProductList";
+import { getProducts } from "../data/products";
 
 function Category() {
   const params = useParams();
@@ -16,6 +18,8 @@ function Category() {
       <Header title={category.title} image={category.image}>
         {category.description}
       </Header>
+
+      <ProductList products={getProducts(category.categoryId)} />
     </>
   );
 }

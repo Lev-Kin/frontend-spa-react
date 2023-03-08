@@ -3,9 +3,9 @@ import Logo from "../Logo/Logo";
 import NavItem from "./NavItem/NavItem";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Search from "../../assets/search.svg";
-import Cart from "../../assets/cartIcon.svg";
-import User from "../../assets/userIcon.svg";
+import Search from "../../assets/icon-svg/search.svg";
+import Cart from "../../assets/icon-svg/cartIcon.svg";
+import User from "../../assets/icon-svg/userIcon.svg";
 
 function Nav() {
   return (

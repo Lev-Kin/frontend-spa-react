@@ -14,7 +14,7 @@ function Product() {
     <>
       <div style={{ display: "flex", padding: "3rem" }}>
         <img
-          style={{ width: "450px", marginRight: "1rem" }}
+          style={{ width: "450px", marginRight: "1rem", borderRadius: "10px" }}
           src={product.image}
           alt={product.title}
         />
@@ -28,7 +28,7 @@ function Product() {
               cursor: "pointer",
               padding: "0.5rem",
               fontSize: "1rem",
-              background: "black",
+              background: "#000",
               color: "white",
               fontFamily: "serif",
               border: "solid 1px grey",

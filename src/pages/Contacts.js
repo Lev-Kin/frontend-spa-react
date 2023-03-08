@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import headerImage from "../assets/contactsHeader-img.jpg";
+import headerImage from "../assets/component/contactsHeader-img.jpg";
 
 function Account() {
   return (

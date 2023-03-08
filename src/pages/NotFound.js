@@ -1,5 +1,5 @@
 import React from "react";
-import headerImage from "../assets/not-found-img.jpg";
+import headerImage from "../assets/component/not-found-img.jpg";
 import Header from "../components/Header/Header";
 
 function NotFound() {

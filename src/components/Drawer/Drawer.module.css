@@ -1,6 +1,6 @@
 .Drawer .content {
     padding: 1rem 0;
-    color: black;
+    color: #000;
     background-color: rgba(255, 255, 255, 0.979);
     overflow: hidden;
     position: fixed;
@@ -9,6 +9,7 @@
     left: 0;
     right: 0;
     z-index: 4;
+
     transform: translateY(-110%);
     transition: all .5s;
 }
@@ -38,5 +39,4 @@
     .Drawer .content {
         transform: translateY(-110%);
     }
-
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import headerImage from "../assets/specialDayHeader-img.jpg";
+import headerImage from "../assets/component/specialDayHeader-img.jpg";
 
 function SpecialDays() {
   return (

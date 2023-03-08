@@ -1,0 +1,38 @@
+.DrawerNav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.DrawerNav .iconContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.DrawerNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.DrawerNav .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.DrawerNav .searchIcon {
+    width: 15px;
+    padding: .9rem;
+}
+
+.DrawerNav .cartIcon {
+    width: 14px;
+    padding: .9rem;
+}
+
+.DrawerNav .userIcon {
+    width: 14px;
+    padding: .9rem;
+}
