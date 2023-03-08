@@ -11,6 +11,7 @@ function Nav({ callBack, toggle }) {
   if (toggle) {
     classNames.push(classes.toggle);
   }
+
   return (
     <div className={classes.DrawerNav}>
       <div className={classes.iconContainer}>

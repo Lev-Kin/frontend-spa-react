@@ -5,7 +5,13 @@
     object-position: center;
     margin-bottom: 10px;
     border-radius: .5rem;
+    transform: scale(1);
+    transition: .2s ease-in-out;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.CategoryItem img:hover {
+    transform: scale(1.07);
 }
 
 .CategoryItem {
