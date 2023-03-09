@@ -1,0 +1,144 @@
+.container {
+    margin: 0 125px 100px;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    font-family: italic;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    margin: 50px;
+}
+
+.aboutSection p {
+    font-size: 17px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: lowercase;
+    line-height: 1.5em;
+}
+
+.firstSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstSection div {
+    margin-top: 50px;
+}
+
+.firstSection p:first-child {
+    margin-bottom: 50px;
+}
+
+.aboutCollage {
+    max-width: 500px;
+    margin-left: 50px;
+}
+
+.darkBg {
+    background-color: rgb(11, 28, 44);
+    padding: 50px 0;
+    margin-bottom: 50px;
+}
+
+.secondSection h1 {
+    color: #fff;
+    margin: 0;
+}
+
+.secondSection {
+    position: relative;
+}
+
+.secondSection .aboutWeAreV {
+    max-width: 238px;
+    position: absolute;
+    top: -130px;
+}
+
+.secondSection .aboutWeAreH {
+    float: right;
+    margin-left: 50px;
+}
+
+.secondSection p {
+    color: #fff;
+    margin-left: 300px;
+}
+
+.thirdSection {
+    margin-top: 150px;
+}
+
+.thirdSection .mission {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.thirdSection p {
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 1070px) {
+    .container {
+        margin: 0 50px 50px;
+    }
+
+    .firstSection {
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+
+    .container h1 {
+        font-size: 1.7rem;
+    }
+
+    .aboutCollage {
+        margin-left: 0;
+        margin: 0 auto;
+    }
+
+    .firstSection div {
+        margin-top: 10px;
+    }
+
+    .firstSection p:first-child {
+        margin-bottom: 20px;
+    }
+
+    .aboutSection p {
+        text-align: center;
+    }
+
+    .secondSection .aboutWeAreV {
+        width: 150px;
+        top: -190px;
+    }
+
+    .secondSection p {
+        color: #fff;
+        margin-left: 0;
+    }
+
+    .darkBg {
+        padding: 130px 0;
+    }
+
+    .secondSection .aboutWeAreH {
+        width: 280px;
+    }
+
+    .thirdSection {
+        margin-top: 100px;
+    }
+
+    .secondSection h1 {
+        margin-left: 140px;
+    }
+}

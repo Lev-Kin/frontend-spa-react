@@ -1,0 +1,48 @@
+.Product {
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.Product img {
+    max-width: 450px;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.Product div {
+    padding: 1rem;
+    font-family: serif;
+    text-align: center;
+}
+
+.Product div h2 {
+    margin-top: 0;
+}
+
+.Product div p {
+    font-size: 1.2rem;
+}
+
+.Product div button {
+    font-size: 1rem;
+    font-family: serif;
+    padding: 0.5rem;
+    color: white;
+    background-color: #000;
+    border: solid 1px grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 745px) {
+    .Product {
+        flex-direction: column;
+    }
+
+    .Product img {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+}

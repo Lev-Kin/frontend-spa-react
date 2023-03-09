@@ -3,12 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Shop from "./pages/Shop";
 import Account from "./pages/Contacts";
-import About from "./pages/About";
+import About from "./pages/About/About";
 import SpecialDays from "./pages/SpecialDays";
-import Delivery from "./pages/Delivery";
 import Location from "./pages/Location";
 import Home from "./pages/Home";
-import Product from "./pages/Product";
+import Product from "./pages/Product/Product";
 import NotFound from "./pages/NotFound";
 import Categories from "./pages/Categories";
 import Category from "./pages/Category";
@@ -25,7 +24,6 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/about" element={<About />} />
           <Route path="/specialdays" element={<SpecialDays />} />
-          <Route path="/delivery" element={<Delivery />} />
           <Route path="/location" element={<Location />} />
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
