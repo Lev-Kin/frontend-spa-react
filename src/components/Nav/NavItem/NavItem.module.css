@@ -12,15 +12,12 @@
     font-weight: 600;
     letter-spacing: 0.1rem;
     text-decoration: none;
+    text-shadow: 0px 0px .2px #000;
     text-align: center;
     display: inline-block;
     position: relative;
     transition: all 0.1s ease-in-out;
     border-left: 3px solid transparent;
-}
-
-.NavItem a.active {
-    background-color: rgb(223, 223, 223);
 }
 
 .NavItem a:hover {
@@ -41,6 +38,10 @@
 }
 
 .NavItem a:hover::after {
+    transform: scaleX(1);
+}
+
+.NavItem a.active::after {
     transform: scaleX(1);
 }
 

@@ -55,5 +55,7 @@
 @media (max-width: 900px) {
     .CategoryItem {
         flex: 0 0 200px;
+        margin-bottom: 1rem;
+        margin-top: .8rem;
     }
 }

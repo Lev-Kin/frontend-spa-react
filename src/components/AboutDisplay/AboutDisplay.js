@@ -1,7 +1,5 @@
 import React from "react";
-import classes from "./About.module.css";
-import Header from "../../components/Header/Header";
-import headerImage from "../../assets/component/aboutHeader-img.jpg";
+import classes from "./AboutDisplay.module.css";
 import aboutCollage from "../../assets/component/aboutCollage.jpg";
 import aboutWeAreV from "../../assets/component/aboutWeAreV.jpg";
 import aboutWeAreH from "../../assets/component/aboutWeAreH.jpg";
@@ -9,14 +7,6 @@ import aboutWeAreH from "../../assets/component/aboutWeAreH.jpg";
 function About() {
   return (
     <>
-      <Header title="About us" image={headerImage}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fugit eius
-        eveniet dolore fugiat et autem, accusamus porro natus veniam facilis in
-        nostrum dicta tenetur saepe deleniti enim quia sunt? Id praesentium
-        repellat consequuntur est magnam quo amet iste rem a voluptate sapiente
-        error explicabo ipsa delectus ab ratione, et odio corrupti consequatur
-        quos at fuga.
-      </Header>
       <section className={classes.aboutSection}>
         <div className={classes.container}>
           <h1>About Luxary Feel</h1>
@@ -50,7 +40,11 @@ function About() {
           <div className={classes.container}>
             <div className={classes.secondSection}>
               <h1>We are</h1>
-              <img src={aboutWeAreV} alt="Fork" className={classes.aboutWeAreV} />
+              <img
+                src={aboutWeAreV}
+                alt="Fork"
+                className={classes.aboutWeAreV}
+              />
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
                 fugit eius eveniet dolore fugiat et autem, accusamus porro natus
@@ -59,7 +53,11 @@ function About() {
                 iste rem a voluptate sapiente error explicabo ipsa delectus ab
                 ratione, et odio corrupti consequatur quos at fuga.
               </p>
-              <img src={aboutWeAreH} alt="Buffet" className={classes.aboutWeAreH} />
+              <img
+                src={aboutWeAreH}
+                alt="Buffet"
+                className={classes.aboutWeAreH}
+              />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import CartButton from "../../components/CartButton/CartButton";
 import { getProduct } from "../../data/products";
 import classes from "./Product.module.css";
 
@@ -18,7 +19,10 @@ function Product() {
         <div>
           <h2>{product.title}</h2>
           <p>{product.description}</p>
-          <button>Add to cart - $ {product.price}</button>
+          <CartButton
+            className={classes.cartButton}
+            productId={params.productId}
+          />
         </div>
       </div>
     </>
