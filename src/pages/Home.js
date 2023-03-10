@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import headerImage from "../assets/component/header-img1.jpg";
-import CategoryList from "../components/CategoryList/CategoryList";
-import { getCategories } from "../data/categories";
+import HomeDisplay from "../components/HomeDisplay/HomeDisplay";
 
 function Home() {
   return (
@@ -14,7 +13,7 @@ function Home() {
         The best luxury quality at any time.
       </Header>
 
-      <CategoryList categories={getCategories()} />
+      <HomeDisplay />
     </>
   );
 }

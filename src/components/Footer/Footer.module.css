@@ -39,7 +39,6 @@
 }
 
 .Footer .container .title h3 {
-    font-size: 1.3rem;
     font-family: 'Roboto Slab', serif;
     letter-spacing: 2px;
     font-weight: 500;
@@ -49,24 +48,24 @@
 button {
     background-color: transparent;
     border: none;
+    border-bottom: 1px solid rgb(128, 128, 128);
     padding: 10px;
     font-size: .9rem;
     color: #fff;
 }
 
-.Footer .container .form form {
-    border-bottom: 1px solid rgb(129, 128, 128);
-    max-width: 350px;
-}
-
 .Footer .container .form form input {
     outline: none;
+    max-width: 350px;
 }
 
 .Footer .container .form form button {
     margin: 0;
+    padding-bottom: 9.3px;
     cursor: pointer;
     border: none;
+    border-radius: 0;
+    border-bottom: 1px solid rgb(129, 128, 128);
 }
 
 .Footer .container .socialLinks {
@@ -109,22 +108,6 @@ button {
     }
 
     .Footer .container .socialLinks img {
-        width: 30px;
-    }
-
-    .Footer .container .form form {
-        margin: 0 auto;
-        padding: 5px;
-        display: flex;
-    }
-
-    .Footer .container .form form input,
-    button {
-        margin: 0;
-        padding: 5px;
-    }
-
-    .Footer .container .form form input {
-        width: 100%;
+        width: 25px;
     }
 }

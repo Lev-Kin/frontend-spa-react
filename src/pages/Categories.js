@@ -10,8 +10,7 @@ function Categories() {
       <Header title="Enjoy your Shopping" image={headerImage}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex pariatur
         voluptatum doloribus enim repudiandae ullam sequi quo suscipit voluptas
-        id, laboriosam necessitatibus, dolore corrupti. Explicabo iure doloribus
-        illum repudiandae tenetur.
+        id, laboriosam necessitatibus, dolore corrupti.
       </Header>
 
       <CategoryList categories={getCategories()} />

@@ -9,11 +9,20 @@ const signUpUrl =
   "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=" + key;
 
 export const start = createAsyncThunk("auth/start", (data, thunkAPI) => {
-  axios.post(data.method === "signin" ? signInUrl : signUpUrl, {
-    email: data.email,
-    password: data.password,
-    returnSecureToken: true,
-  });
+  thunkAPI.dispatch({ type: "auth/init" });
+  thunkAPI.dispatch({ type: "auth/loading" });
+  axios
+    .post(data.method === "signin" ? signInUrl : signUpUrl, {
+      email: data.email,
+      password: data.password,
+      returnSecureToken: true,
+    })
+    .then((response) => {
+      thunkAPI.dispatch({ type: "auth/success", payload: response.data });
+    })
+    .catch((error) => {
+      thunkAPI.dispatch({ type: "auth/error", payload: error.response.data });
+    });
 });
 
 const authSlice = createSlice({
@@ -25,10 +34,24 @@ const authSlice = createSlice({
     loading: false,
   },
   reducers: {
-    init: (state, action) => {},
-    success: (state, action) => {},
-    loading: (state, action) => {},
-    error: (state, action) => {},
+    init: (state, action) => {
+      state.localId = null;
+      state.idToken = null;
+      state.error = null;
+      state.loading = false;
+    },
+    loading: (state, action) => {
+      state.loading = true;
+    },
+    success: (state, action) => {
+      state.localId = action.payload.localId;
+      state.idToken = action.payload.idToken;
+      state.loading = false;
+    },
+    error: (state, action) => {
+      state.loading = false;
+      state.error = action.payload.error.message;
+    },
   },
 });
 

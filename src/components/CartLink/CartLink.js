@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import Cart from "../../assets/cartIcon.svg";
+import Cart from "../../assets/icon-svg/cartIcon.svg";
 import classes from "./CartLink.module.css";
 
 export default function CartLink() {

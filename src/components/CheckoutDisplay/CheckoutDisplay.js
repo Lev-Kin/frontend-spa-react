@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../data/products";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,8 +8,18 @@ import { checkout } from "../../redux/cartSlice";
 function CheckoutDisplay() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const items = useSelector((store) => store.cart.items);
   const products = getProducts();
+
+  const { items, localId } = useSelector((store) => ({
+    items: store.cart.items,
+    localId: store.auth.localId,
+  }));
+
+  useEffect(() => {
+    if (!localId) {
+      navigate("/auth");
+    }
+  }, [localId, navigate]);
 
   let total = 0;
   let output = products
