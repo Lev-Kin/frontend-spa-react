@@ -1,10 +1,11 @@
 import React from "react";
-import classes from "./Cart.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../data/products";
 import { Link } from "react-router-dom";
+import classes from "./CartDisplay.module.css";
+import { increment, decrement, remove } from "../../redux/cartSlice";
 
-function Cart() {
+function CartDisplay() {
   const items = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
   const products = getProducts();
@@ -17,7 +18,10 @@ function Cart() {
 
       return (
         <div className={classes.item}>
-          <Link to="" className={classes.productCard}>
+          <Link
+            to={"/cart/" + product.productId}
+            className={classes.productCard}
+          >
             <img
               src={product.image}
               alt={product.title}
@@ -28,9 +32,7 @@ function Cart() {
           <div>
             <button
               className={classes.changeButton}
-              onClick={() =>
-                dispatch({ type: "cart/decrement", payload: product.productId })
-              }
+              onClick={() => dispatch(decrement(product.productId))}
             >
               -
             </button>
@@ -39,9 +41,7 @@ function Cart() {
             </span>
             <button
               className={classes.changeButton}
-              onClick={() =>
-                dispatch({ type: "cart/increment", payload: product.productId })
-              }
+              onClick={() => dispatch(increment(product.productId))}
             >
               +
             </button>
@@ -51,9 +51,7 @@ function Cart() {
           </span>
           <button
             className={classes.deleteButton}
-            onClick={() =>
-              dispatch({ type: "cart/delete", payload: product.productId })
-            }
+            onClick={() => dispatch(remove(product.productId))}
           >
             Delete
           </button>
@@ -61,8 +59,18 @@ function Cart() {
       );
     });
 
-  if (!output) {
-    output = "No items in the cart.";
+  let checkoutPath = "/checkout";
+
+  if (!output.length) {
+    output = (
+      <>
+        <div>No items in the cart.</div>
+        <Link to="/shop">
+          <button className={classes.checkoutButton}>Continue shopping</button>
+        </Link>
+      </>
+    );
+    checkoutPath = "/shop";
   }
 
   return (
@@ -76,7 +84,7 @@ function Cart() {
         <div className={classes.totalPrice}>
           <h2>Order summary</h2>
           Total: ${total} <br />
-          <Link to="/checkout">
+          <Link to={checkoutPath}>
             <button className={classes.checkoutButton}>Checkout</button>
           </Link>
         </div>
@@ -85,4 +93,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+export default CartDisplay;

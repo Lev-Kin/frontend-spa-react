@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import CartButton from "../../components/CartButton/CartButton";
 import { getProduct } from "../../data/products";
-import classes from "./Product.module.css";
+import classes from "./ProductDisplay.module.css";
+import CartButton from "../CartButton/CartButton";
 
-function Product() {
+function ProductDisplay() {
   const params = useParams();
   const product = getProduct(params.productId);
 
@@ -14,7 +14,7 @@ function Product() {
 
   return (
     <>
-      <div className={classes.Product}>
+      <div className={classes.ProductDisplay}>
         <img src={product.image} alt={product.title} />
         <div>
           <h2>{product.title}</h2>
@@ -29,4 +29,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default ProductDisplay;

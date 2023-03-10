@@ -2,10 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../data/products";
 import { Link, useNavigate } from "react-router-dom";
-import classes from "./Checkout.module.css";
+import classes from "./CheckoutDisplay.module.css";
 import { checkout } from "../../redux/cartSlice";
 
-function Checkout() {
+function CheckoutDisplay() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const items = useSelector((store) => store.cart.items);
@@ -18,16 +18,17 @@ function Checkout() {
       total += product.price * items[product.productId];
 
       return (
-        <div>
-          <Link to="">{product.title}</Link> {items[product.productId]} $
-          {product.price * items[product.productId]}
-        </div>
+        <li>
+          <Link to={"/cart/" + product.productId}>{product.title}</Link>{" "}
+          <span className={classes.productQuantity}>
+            {items[product.productId]}
+          </span>
+          <span className={classes.productPrice}>
+            {product.price * items[product.productId]}$
+          </span>
+        </li>
       );
     });
-
-  if (!output) {
-    output = "No items in the cart.";
-  }
 
   function onCheckout(event) {
     event.preventDefault();
@@ -41,12 +42,12 @@ function Checkout() {
   return (
     <div className={classes.Checkout}>
       <div className={classes.container}>
-        <div className={classes.cartHeader}>
+        <div className={classes.checkoutHeader}>
           <h1>Checkout</h1>
           <p>Please review items in your cart.</p>
         </div>
-        <div className={classes.productList}>{output}</div>
-        <div className={classes.totalPrice}>Total: ${total}</div>
+        <ul className={classes.productList}>{output}</ul>
+        <div className={classes.totalPrice}>Total: {total}$</div>
         <form onSubmit={onCheckout}>
           <label>
             First name:
@@ -73,4 +74,4 @@ function Checkout() {
   );
 }
 
-export default Checkout;
+export default CheckoutDisplay;

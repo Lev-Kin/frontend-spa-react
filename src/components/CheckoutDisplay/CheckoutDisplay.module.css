@@ -1,0 +1,66 @@
+.Checkout {
+    font-size: 17px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: lowercase;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 20px;
+}
+
+.Checkout .container {
+    margin: 0 125px;
+}
+
+.Checkout .container .checkoutHeader {
+    text-align: center;
+}
+
+.Checkout .container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.Checkout .container h1 {
+    text-transform: uppercase;
+    font-family: italic;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.Checkout .container .productPrice {
+    margin-left: 50px;
+}
+
+.Checkout .container ul {
+    text-align: left;
+    margin: 50px 0 30px;
+}
+
+button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-family: serif;
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #000;
+    border: solid 1px grey;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.totalPrice {
+    margin: 20px 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    .Checkout .container {
+        margin: 0 100px;
+    }
+
+    .Checkout .container h1 {
+        margin: 50px 0;
+    }
+}

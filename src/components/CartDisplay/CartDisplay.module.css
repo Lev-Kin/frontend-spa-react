@@ -38,10 +38,9 @@ h2 {
 .Cart .container .productCard {
     display: flex;
     align-items: center;
-    margin-right: 20px;
     text-decoration: none;
     color: #000;
-    max-width: 400px;
+    width: 400px;
     cursor: default;
 }
 
@@ -68,6 +67,7 @@ h2 {
 
 .changeButton {
     color: #000;
+    background-color: #fff;
     margin: 5px;
     padding: 5px 10px;
     cursor: pointer;
@@ -96,7 +96,7 @@ h2 {
     margin: 15px;
     padding: 10px 50px;
     font-size: 1.2rem;
-    font-family: "Nunito Sans", sans-serif;
+    font-family: serif;
     letter-spacing: 2px;
     color: #fff;
     background-color: #000;
@@ -138,6 +138,10 @@ h2 {
 }
 
 @media (max-width: 800px) {
+    .Cart {
+        padding: 20px 0;
+    }
+
     .Cart .container {
         padding: 0 80px;
     }
@@ -159,8 +163,8 @@ h2 {
         margin: 10px 0;
     }
 
-    .Cart .container .productCard,
-    .productImage {
+    .Cart .container .productCard {
+        max-width: 350px;
         margin-right: 0px;
     }
 

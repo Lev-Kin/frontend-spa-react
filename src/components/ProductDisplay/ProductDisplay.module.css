@@ -1,36 +1,36 @@
-.Product {
+.ProductDisplay {
     display: flex;
     justify-content: center;
     padding: 3rem;
 }
 
-.Product img {
+.ProductDisplay img {
     max-width: 450px;
     border-radius: 10px;
     margin-right: 1rem;
 }
 
-.Product div {
+.ProductDisplay div {
     padding: 1rem;
     font-family: serif;
     text-align: center;
 }
 
-.Product div h2 {
+.ProductDisplay div h2 {
     margin-top: 0;
 }
 
-.Product div p {
+.ProductDisplay div p {
     font-size: 1.2rem;
 }
 
 
 @media (max-width: 745px) {
-    .Product {
+    .ProductDisplay {
         flex-direction: column;
     }
 
-    .Product img {
+    .ProductDisplay img {
         margin-right: 0;
         margin-bottom: 0.5rem;
     }
