@@ -33,11 +33,19 @@
 
 .Checkout .container ul {
     text-align: left;
-    margin: 50px 0 30px;
+    margin: 50px auto 30px;
+    max-width: 500px;
 }
 
-button {
-    margin: 5px;
+.Checkout .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Checkout button {
+    width: 200px;
+    margin: 5px auto;
     padding: 5px 10px;
     font-size: 1rem;
     font-family: serif;

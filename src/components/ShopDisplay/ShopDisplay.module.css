@@ -1,0 +1,20 @@
+.ShopDisplay {
+    text-align: center;
+}
+
+.ShopDisplay .categories {
+    border-bottom: 1px solid grey;
+}
+
+.ShopDisplay h3 {
+    font-family: 'Libre Baskerville', serif;
+    text-transform: none;
+    font-size: 1.2rem;
+    margin: 30px 0 20px;
+}
+
+@media (max-width: 900px) {
+    .ShopDisplay h3 {
+        margin: 0;
+    }
+}

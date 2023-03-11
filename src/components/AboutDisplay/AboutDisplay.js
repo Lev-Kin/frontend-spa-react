@@ -42,7 +42,7 @@ function About() {
               <h1>We are</h1>
               <img
                 src={aboutWeAreV}
-                alt="Fork"
+                alt="aboutWeAreV"
                 className={classes.aboutWeAreV}
               />
               <p>
@@ -55,7 +55,7 @@ function About() {
               </p>
               <img
                 src={aboutWeAreH}
-                alt="Buffet"
+                alt="aboutWeAreH"
                 className={classes.aboutWeAreH}
               />
             </div>

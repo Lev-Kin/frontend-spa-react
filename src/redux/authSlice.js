@@ -25,14 +25,19 @@ export const start = createAsyncThunk("auth/start", (data, thunkAPI) => {
     });
 });
 
+const authInitial = JSON.parse(
+  localStorage.getItem("auth") ? localStorage.getItem("auth") : "null"
+);
 const authSlice = createSlice({
   name: "auth",
-  initialState: {
-    localId: null,
-    idToken: null,
-    error: null,
-    loading: false,
-  },
+  initialState: authInitial
+    ? authInitial
+    : {
+        localId: null,
+        idToken: null,
+        error: null,
+        loading: false,
+      },
   reducers: {
     init: (state, action) => {
       state.localId = null;
