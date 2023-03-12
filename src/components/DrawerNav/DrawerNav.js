@@ -3,10 +3,14 @@ import classes from "./DrawerNav.module.css";
 import NavItem from "./NavItem/NavItem";
 import { NavLink } from "react-router-dom";
 import Search from "../../assets/icon-svg/search.svg";
-import Cart from "../../assets/icon-svg/cartIcon.svg";
 import User from "../../assets/icon-svg/userIcon.svg";
+import signout from "../../assets/icon-svg/sign-in-svgrepo-com.svg";
+import CartLink from "../CartLink/CartLink";
+import { useSelector } from "react-redux";
 
 function Nav({ callBack, toggle }) {
+  const isAuthenticated = useSelector((store) => store.auth.idToken !== null);
+
   const classNames = [classes.NavToggle];
   if (toggle) {
     classNames.push(classes.toggle);
@@ -18,11 +22,18 @@ function Nav({ callBack, toggle }) {
         <NavLink to="/search" className={classes.icons}>
           <img src={Search} className={classes.searchIcon} alt="Search" />
         </NavLink>
-        <NavLink to="/auth" className={classes.icons}>
-          <img src={User} className={classes.userIcon} alt="Account" />
-        </NavLink>
+        {!isAuthenticated ? (
+          <NavLink to="/auth" className={classes.icons}>
+            <img src={User} className={classes.userIcon} alt="Account" />
+          </NavLink>
+        ) : null}
+        {isAuthenticated ? (
+          <NavLink to="/signout" className={classes.icons}>
+            <img src={signout} className={classes.userIcon} alt="Account" />
+          </NavLink>
+        ) : null}
         <NavLink to="/cart" className={classes.icons}>
-          <img src={Cart} className={classes.cartIcon} alt="Cart" />
+          <CartLink />
         </NavLink>
       </div>
       <ul>
@@ -34,11 +45,11 @@ function Nav({ callBack, toggle }) {
           Shop
         </NavItem>
         <NavItem
-          url="/specialdays"
+          url="/special"
           onClick={callBack}
           className={classNames.join(" ")}
         >
-          Special days
+          Special
         </NavItem>
         <NavItem
           url="/delivery"

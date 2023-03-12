@@ -12,7 +12,6 @@ function Categories() {
         voluptatum doloribus enim repudiandae ullam sequi quo suscipit voluptas
         id, laboriosam necessitatibus, dolore corrupti.
       </Header>
-
       <CategoryList categories={getCategories()} />
     </>
   );

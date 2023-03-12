@@ -1,6 +1,6 @@
+import React from "react";
 import { NavLink, useMatch } from "react-router-dom";
 import classes from "./NavItem.module.css";
-import React from "react";
 
 function NavItem({ url, active, children }) {
   return (

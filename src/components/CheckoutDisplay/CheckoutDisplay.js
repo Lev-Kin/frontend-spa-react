@@ -28,23 +28,31 @@ function CheckoutDisplay() {
       total += product.price * items[product.productId];
 
       return (
-        <li>
-          <Link to={"/cart/" + product.productId}>{product.title}</Link>{" "}
-          <span className={classes.productQuantity}>
-            {items[product.productId]}
-          </span>
-          <span className={classes.productPrice}>
-            {product.price * items[product.productId]}$
-          </span>
+        <li key={product.productId}>
+          <div className={classes.orderItem}>
+            <Link to={"/cart/" + product.productId}>{product.title}</Link>
+            <span className={classes.productQuantity}>
+              {items[product.productId]}
+            </span>
+            <span className={classes.productPrice}>
+              ${product.price * items[product.productId]}
+            </span>
+          </div>
         </li>
       );
     });
 
   function onCheckout(event) {
     event.preventDefault();
-
+    //
+    //======================================= idLocal: localId
+    // =====->
     const formData = new FormData(event.target);
-    const order = { items: items, ...Object.fromEntries(formData.entries()) };
+    const order = {
+      items: items,
+      idLocal: localId,
+      ...Object.fromEntries(formData.entries()),
+    };
     dispatch(checkout(order));
     navigate("/");
   }
@@ -52,32 +60,46 @@ function CheckoutDisplay() {
   return (
     <div className={classes.Checkout}>
       <div className={classes.container}>
-        <div className={classes.checkoutHeader}>
-          <h1>Checkout</h1>
-          <p>Please review items in your cart.</p>
+        <h1>Checkout</h1>
+        <p>Please review items in your cart.</p>
+        <div className={classes.card}>
+          <div className={classes.orders}>
+            <h4>Your order</h4>
+            <ul>{output}</ul>
+            <div className={classes.totalPrice}>Total: ${total}</div>
+          </div>
+          <form onSubmit={onCheckout}>
+            <h4>Billing details</h4>
+            <label>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="First name"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Last name"
+                required
+              />
+            </label>
+            <label>
+              <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                required
+              />
+            </label>
+            <label>
+              <input type="text" name="phone" placeholder="Phone" required />
+            </label>
+            <button>Complete the order</button>
+          </form>
         </div>
-        <ul className={classes.productList}>{output}</ul>
-        <div className={classes.totalPrice}>Total: {total}$</div>
-        <form onSubmit={onCheckout}>
-          <label>
-            First name:
-            <input type="text" name="firstName" required />
-          </label>
-          <label>
-            Last name:
-            <input type="text" name="lastName" required />
-          </label>
-          <label>
-            Address:
-            <input type="text" name="address" required />
-          </label>
-          <label>
-            Phone:
-            <input type="text" name="phone" required />
-          </label>
-
-          <button>Complete the order</button>
-        </form>
       </div>
     </div>
   );

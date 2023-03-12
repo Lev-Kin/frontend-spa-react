@@ -9,7 +9,6 @@
     left: 0;
     right: 0;
     z-index: 4;
-
     transform: translateY(-110%);
     transition: all .5s;
 }

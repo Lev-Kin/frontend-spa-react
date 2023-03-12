@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header/Header";
 import headerImage from "../assets/component/locationHeader-img.jpg";
+import LocationDisplay from "../components/LocationDisplay/LocationDisplay";
 
 function Location() {
   return (
@@ -11,6 +12,7 @@ function Location() {
         id, laboriosam necessitatibus, dolore corrupti. Explicabo iure doloribus
         illum repudiandae tenetur.
       </Header>
+      <LocationDisplay />
     </>
   );
 }

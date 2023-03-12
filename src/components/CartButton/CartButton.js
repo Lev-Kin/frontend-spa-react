@@ -1,5 +1,5 @@
-import React from "react";
 import { useDispatch } from "react-redux";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../data/products";
 import classes from "./CartButton.module.css";

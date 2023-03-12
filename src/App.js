@@ -4,7 +4,7 @@ import Layout from "./components/Layout/Layout";
 import Shop from "./pages/Shop";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
-import SpecialDays from "./pages/SpecialDays";
+import Special from "./pages/Special";
 import Location from "./pages/Location";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
@@ -15,6 +15,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Auth from "./pages/Auth";
 import SignOut from "./pages/SignOut";
+import History from "./pages/History";
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
           <Route path="/categories/:categoryId" element={<Category />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/about" element={<About />} />
-          <Route path="/specialdays" element={<SpecialDays />} />
+          <Route path="/special" element={<Special />} />
           <Route path="/location" element={<Location />} />
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
@@ -35,6 +36,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/signout" element={<SignOut />} />
+          <Route path="/history" element={<History />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

@@ -4,7 +4,7 @@ import aboutCollage from "../../assets/component/aboutCollage.jpg";
 import aboutWeAreV from "../../assets/component/aboutWeAreV.jpg";
 import aboutWeAreH from "../../assets/component/aboutWeAreH.jpg";
 
-function About() {
+function AboutDisplay() {
   return (
     <>
       <section className={classes.aboutSection}>
@@ -73,4 +73,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutDisplay;

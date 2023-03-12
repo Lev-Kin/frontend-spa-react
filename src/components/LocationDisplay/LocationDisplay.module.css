@@ -1,0 +1,139 @@
+.LocationDisplay {
+    font-size: 17px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: lowercase;
+    line-height: 1.5em;
+    text-align: center;
+    padding: 20px;
+}
+
+.LocationDisplay .container {
+    margin: 0 125px;
+}
+
+.LocationDisplay .container .card,
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.LocationDisplay img.locationImage {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 10px;
+}
+
+.LocationDisplay img.locationPin {
+    width: 50px;
+    height: 50px;
+    color: #000;
+}
+
+.LocationDisplay .container .address {
+    padding: 0 20px;
+    text-align: left;
+}
+
+.LocationDisplay .container .address h5 {
+    font-size: 1rem;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: gray;
+}
+
+.LocationDisplay .container .address p {
+    font-size: 15.5px;
+    margin: 0 0 20px;
+}
+
+.orderButton {
+    margin: 0;
+    padding: 10px 50px;
+    font-size: 1.2rem;
+    font-family: serif;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #000;
+    border: solid 2px rgb(151, 151, 151);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.orderButton::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.orderButton:hover {
+    color: #000;
+    font-weight: 600;
+}
+
+.orderButton:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+@media (max-width: 1050px) {
+    .LocationDisplay .container {
+        margin: 0 50px;
+    }
+
+    .LocationDisplay .container .address h3 {
+        margin-top: 15px;
+    }
+
+    .orderButton {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 900px) {
+    .LocationDisplay .container {
+        margin: 0 30px;
+    }
+
+    .orderButton {
+        padding: 10px 30px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .LocationDisplay .container .card {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .LocationDisplay img.locationImage {
+        width: 100%;
+        max-width: 400px;
+        max-height: 400px;
+    }
+
+    .LocationDisplay img.locationPin {
+        width: 30px;
+        height: 30px;
+        color: #000;
+    }
+
+    .LocationDisplay .container .address {
+        padding: 0 10px;
+        text-align: center;
+    }
+}

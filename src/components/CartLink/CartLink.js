@@ -1,6 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
 import Cart from "../../assets/icon-svg/cartIcon.svg";
 import classes from "./CartLink.module.css";
 
@@ -13,9 +12,9 @@ export default function CartLink() {
   });
 
   return (
-    <NavLink to="/cart" className={classes.CartLink}>
+    <div className={classes.CartLink}>
       <img src={Cart} width="15px" alt="Cart" className={classes.cartIcon} />
       <span className={classes.number}>{number}</span>
-    </NavLink>
+    </div>
   );
 }

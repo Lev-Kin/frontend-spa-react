@@ -10,7 +10,6 @@ function Shop() {
         Quos fugit eius eveniet dolore fugiat et autem, accusamus porro natus
         veniam facilis in nostrum dicta tenetur saepe deleniti enim quia sunt?
       </Header>
-
       <ShopDisplay />
     </>
   );

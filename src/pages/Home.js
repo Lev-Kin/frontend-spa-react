@@ -12,7 +12,6 @@ function Home() {
       >
         The best luxury quality at any time.
       </Header>
-
       <HomeDisplay />
     </>
   );

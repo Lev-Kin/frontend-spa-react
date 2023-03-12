@@ -11,13 +11,9 @@
     margin: 0 125px;
 }
 
-.Checkout .container .checkoutHeader {
-    text-align: center;
-}
-
 .Checkout .container a {
-    text-decoration: none;
     color: #000;
+    max-width: 200px;
 }
 
 .Checkout .container h1 {
@@ -27,48 +23,160 @@
     letter-spacing: 2px;
 }
 
+.Checkout .container .card {
+    display: flex;
+    justify-content: space-between;
+}
+
 .Checkout .container .productPrice {
     margin-left: 50px;
 }
 
+.Checkout .container .productQuantity {
+    margin-left: 50px;
+}
+
+.Checkout .container .orders {
+    max-width: 500px;
+    text-align: left;
+    padding: 30px;
+}
+
+.Checkout .container h4 {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-family: italic;
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: .8px;
+}
+
 .Checkout .container ul {
     text-align: left;
-    margin: 50px auto 30px;
-    max-width: 500px;
+    margin: 0;
+    padding: 10px 20px;
+    border-top: 1px solid rgb(182, 182, 182);
+    border-bottom: 1px solid rgb(182, 182, 182);
+}
+
+.Checkout .container ul li {
+    padding: 10px 0;
+}
+
+.Checkout .container ul li .orderItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: inside;
 }
 
 .Checkout .container form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    padding: 30px;
 }
 
-.Checkout button {
-    width: 200px;
-    margin: 5px auto;
-    padding: 5px 10px;
+.Checkout .container form input {
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+    border: 1px solid #0b1c2c;
+    border-radius: 5px;
     font-size: 1rem;
+}
+
+.Checkout .container form button {
+    max-width: 300px;
+    margin: 15px auto;
+    padding: 10px 50px;
+    font-size: 1.2rem;
     font-family: serif;
-    padding: 0.5rem;
+    letter-spacing: 2px;
     color: #fff;
     background-color: #000;
-    border: solid 1px grey;
+    border: solid 2px rgb(151, 151, 151);
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.Checkout .container form button::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.904);
+    transition: all 0.3s ease;
+}
+
+.Checkout .container form button:hover {
+    color: #000;
+    font-weight: 600;
+}
+
+.Checkout .container form button:hover:after {
+    left: 0;
+    width: 100%;
 }
 
 .totalPrice {
     margin: 20px 10px;
     font-size: 18px;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1030px) {
     .Checkout .container {
         margin: 0 100px;
     }
 
+    .Checkout .container .productPrice {
+        margin-left: 30px;
+    }
+
+    .Checkout .container .productQuantity {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .Checkout .container .card {
+        flex-direction: column;
+    }
+
     .Checkout .container h1 {
-        margin: 50px 0;
+        font-size: 1.7rem;
+        margin: 20px 0;
+    }
+
+    .Checkout .container {
+        margin: 0 50px;
+    }
+
+    .Checkout .container .orders {
+        padding: 20px 0;
+    }
+
+    .Checkout .container p {
+        margin: 0px;
+    }
+
+    .Checkout .container form {
+        padding: 0;
+    }
+
+    .Checkout .container form button {
+        margin: 15px auto;
+        padding: 10px 30px;
+        font-size: 1.1rem;
+        letter-spacing: 1.8px;
     }
 }
