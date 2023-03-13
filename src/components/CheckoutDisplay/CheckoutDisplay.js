@@ -49,8 +49,8 @@ function CheckoutDisplay() {
     // =====->
     const formData = new FormData(event.target);
     const order = {
-      items: items,
       idLocal: localId,
+      items: items,
       ...Object.fromEntries(formData.entries()),
     };
     dispatch(checkout(order));

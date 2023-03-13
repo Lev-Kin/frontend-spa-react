@@ -1,0 +1,75 @@
+.HistoryDisplay img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+    border-radius: .5rem;
+    transform: scale(1);
+    transition: .2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+}
+
+.HistoryDisplay img:hover {
+    transform: scale(1.07);
+}
+
+.HistoryDisplay {
+    position: relative;
+    flex: 0 0 250px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.HistoryDisplay a {
+    color: #000;
+    margin-top: 15px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: lowercase;
+    text-decoration: none;
+    text-align: center;
+    transition: .2s ease-in-out;
+}
+
+.HistoryDisplay a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: #000;
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.HistoryDisplay a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+    .HistoryDisplay {
+        flex: 0 0 200px;
+        margin-bottom: 1rem;
+        margin-top: .8rem;
+    }
+}
+
+.HistoryDisplayList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 6rem;
+}
+
+@media (max-width: 900px) {
+    .HistoryDisplayList {
+        padding: 1rem;
+        margin: 0 auto;
+    }
+}
