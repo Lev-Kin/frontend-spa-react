@@ -117,12 +117,12 @@ h2 {
     top: 0;
     right: 0;
     z-index: -1;
-    background: rgba(255, 255, 255, 0.904);
+    background: rgba(255, 255, 255, 0.9);
     transition: all 0.3s ease;
 }
 
 .checkoutButton:hover {
-    color: #0b1c2c;
+    color: #000;
     font-weight: 600;
 }
 

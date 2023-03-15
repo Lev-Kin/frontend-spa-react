@@ -11,14 +11,17 @@ function CartDisplay() {
   const dispatch = useDispatch();
   const products = getProducts();
 
+  console.log(items);
   let total = 0;
   let output = products
     .filter((product) => items[product.productId])
+    
     .map((product) => {
       total += product.price * items[product.productId];
 
+      console.log(product);
       return (
-        <div className={classes.item}>
+        <div key={product.productId} className={classes.item}>
           <Link
             key={product.productId}
             to={"/cart/" + product.productId}
@@ -29,7 +32,8 @@ function CartDisplay() {
               alt={product.title}
               className={classes.productImage}
             />
-            {product.title}
+            <div>{product.title}</div>
+            <div>Size 1213</div>
           </Link>
           <div>
             <button
@@ -62,7 +66,6 @@ function CartDisplay() {
     });
 
   let checkoutPath = "/checkout";
-
   if (!output.length) {
     output = (
       <>

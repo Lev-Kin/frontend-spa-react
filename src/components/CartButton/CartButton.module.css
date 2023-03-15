@@ -1,3 +1,39 @@
+.textSelect {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: -17px;
+    margin-bottom: -25px;
+}
+
+.textAdd {
+    font-size: 1rem;
+    margin-top: -25px;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select input[type=radio] {
+    position: absolute;
+    left: -99999px;
+}
+
+.select span {
+    display: block;
+    padding: 0.2em 1em;
+    border: 1px solid #000;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.select input[type=radio]:checked+span {
+    border-color: goldenrod;
+    background: goldenrod;
+}
+
 .CartButton {
     font-size: 1rem;
     font-family: serif;

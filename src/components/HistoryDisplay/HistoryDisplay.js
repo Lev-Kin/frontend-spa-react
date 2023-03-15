@@ -9,7 +9,7 @@ import classes from "./HistoryDisplay.module.css";
 function Orders() {
   const [orders, setOrders] = useState(null);
   const { localId } = useSelector((store) => store.auth);
-  let allProducts = getProducts();
+  const allProducts = getProducts();
   let showProducts = [];
 
   useEffect(() => {
@@ -27,6 +27,7 @@ function Orders() {
   }, []);
 
   let output = <h1>Loading...</h1>;
+  console.log(orders);
   if (orders !== null) {
     orders
       .filter((order) => order.idLocal === localId)
@@ -47,13 +48,18 @@ function Orders() {
     console.log(showProducts);
     output = showProducts.map((product) => {
       return (
-        <div key={product.productId} className={classes.HistoryDisplay}>
+        <div
+          key={product.productId}
+          className={classes.HistoryDisplay}
+          idorderprop={product.idOrder}
+        >
+          <h4>Order</h4>
+          <div className={classes.order}>{product.idOrder}</div>
           <Link to={"/shop/" + product.productId}>
             <img src={product.image} alt={product.title} />
-            <p>{product.idOrder}</p>
           </Link>
           <Link to={"/shop/" + product.productId}>Go product</Link>
-        </div> 
+        </div>
       );
     });
   }

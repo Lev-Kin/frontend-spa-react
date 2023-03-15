@@ -13,6 +13,8 @@ export const checkout = createAsyncThunk(
   }
 );
 
+//localStorage.clear();
+
 const cartSlice = createSlice({
   name: "cart",
   initialState: {
@@ -23,13 +25,25 @@ const cartSlice = createSlice({
     ),
   },
   reducers: {
-    add: (store, action) => {
+    sizze: (store, action) => {
       if (store.items[action.payload]) {
         store.items[action.payload]++;
       } else {
         store.items[action.payload] = 1;
       }
     },
+
+    add: (store, action) => {
+
+
+
+      if (store.items[action.payload]) {
+        store.items[action.payload]++;
+      } else {
+        store.items[action.payload] = 1;
+      }
+    },
+
     remove: (store, action) => {
       delete store.items[action.payload];
     },
@@ -45,13 +59,14 @@ const cartSlice = createSlice({
     },
   },
   extraReducers: {
-    [checkout.fulfilled]: (state, action) => {
+    [checkout.fulfilled]: (store, action) => {
       console.log(action);
-      state.items = {};
+      store.items = {};
     },
   },
 });
 
-export const { add, remove, increment, decrement } = cartSlice.actions;
+export const {  sizze, add, remove, increment, decrement } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;
