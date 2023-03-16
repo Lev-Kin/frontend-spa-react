@@ -1,25 +1,31 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../data/products";
-import { Link } from "react-router-dom";
 import classes from "./CartDisplay.module.css";
+import history from "../../assets/icon/history-svgrepo-com.svg";
 import { increment, decrement, remove } from "../../redux/cartSlice";
-import history from "../../assets/icon-svg/history-svgrepo-com.svg";
 
 function CartDisplay() {
   const items = useSelector((store) => store.cart.items);
   const dispatch = useDispatch();
   const products = getProducts();
 
-  console.log(items);
+  // ====->
+  // const keys = Object.keys(items);
+  // let pId = Object.values(products).find((e) => e.productId).productId;
+  // console.log(Object.values(products).find((e) => e.productId).productId);
+  // console.log(Object.keys(items));
+  // console.log(items);
+  // console.log(products);
+
   let total = 0;
   let output = products
     .filter((product) => items[product.productId])
-    
     .map((product) => {
       total += product.price * items[product.productId];
 
-      console.log(product);
+      // console.log(product);
       return (
         <div key={product.productId} className={classes.item}>
           <Link
@@ -33,7 +39,7 @@ function CartDisplay() {
               className={classes.productImage}
             />
             <div>{product.title}</div>
-            <div>Size 1213</div>
+            {/* <div>Size 1213</div> */}
           </Link>
           <div>
             <button
@@ -94,7 +100,7 @@ function CartDisplay() {
           </Link>
           <div>
             <Link to="/history">
-              <img src={history} alt="History" className={classes.history} />
+              <p><img src={history} alt="History" className={classes.history} title="-= Go History =-"/></p>
             </Link>
           </div>
         </div>

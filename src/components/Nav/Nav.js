@@ -4,8 +4,8 @@ import Logo from "../Logo/Logo";
 import NavItem from "./NavItem/NavItem";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import User from "../../assets/icon-svg/userIcon.svg";
-import signout from "../../assets/icon-svg/sign-in-svgrepo-com.svg";
+import User from "../../assets/icon/userIcon.svg";
+import signout from "../../assets/icon/sign-in-svgrepo-com.svg";
 import CartLink from "../CartLink/CartLink";
 
 function Nav() {

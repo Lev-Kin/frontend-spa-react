@@ -1,9 +1,9 @@
-import { useDispatch } from "react-redux";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../data/products";
 import classes from "./CartButton.module.css";
-import { add , sizze} from "../../redux/cartSlice";
+import { add } from "../../redux/cartSlice";
 
 export default function CartButton({ productId, price }) {
   const [size, setSize] = useState("");
@@ -17,17 +17,11 @@ export default function CartButton({ productId, price }) {
   }
 
   function onAddToCart() {
-
     dispatch(add(productId));
-    
-// dispatch(sizaddd(size(size), add(productId)))
-    dispatch(sizze(size));
-    // dispatch(size(size));
-    // console.log(dispatch(add(productId)))
-    //  dispatch({sizes : size})
-    
-    console.log(productId)
-    console.log(size);
+
+    // console.log(productId);
+    // console.log(size);
+
     setAdd(count + 1);
   }
 

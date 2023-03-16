@@ -1,13 +1,13 @@
 import React from "react";
+import { start } from "../../redux/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { start } from "../../redux/authSlice";
 import classes from "./AuthDisplay.module.css";
 import image from "../../assets/component/deliveryHeader-img.jpg";
 
 export default function AuthDisplay() {
-  const dispatch = useDispatch();
   const { error, localId } = useSelector((store) => store.auth);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   function onAuthStart(event) {
@@ -50,7 +50,6 @@ export default function AuthDisplay() {
         <label>
           <input type="password" name="password" placeholder="Password" />
         </label>
-
         <button>Sign in</button>
         <button>Sign up</button>
       </form>

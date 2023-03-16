@@ -4,6 +4,7 @@ import classes from "./Drawer.module.css";
 
 function Drawer({ open }) {
   const classNames = [classes.Drawer];
+
   if (open) {
     classNames.push(classes.open);
   }

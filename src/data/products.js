@@ -29,6 +29,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 847,
+    size: ""
   },
   {
     image: _MG_0293,
@@ -38,6 +39,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 428,
+    size: ""
   },
   {
     image: _MG_0352,
@@ -47,6 +49,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 754,
+    size: ""
   },
   {
     image: _MG_0477,
@@ -56,6 +59,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 345,
+    size: ""
   },
   {
     image: _MG_0490,
@@ -65,6 +69,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 289,
+    size: ""
   },
   {
     image: _MG_6223,
@@ -74,6 +79,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 648,
+    size: ""
   },
   {
     image: _MG_135002705,
@@ -83,6 +89,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 128,
+    size: ""
   },
   {
     image: _MG_202112540,
@@ -92,6 +99,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 189,
+    size: ""
   },
   {
     image: _MG_219924598,
@@ -101,6 +109,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 137,
+    size: ""
   },
   {
     image: _MG_442062354,
@@ -110,6 +119,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 198,
+    size: ""
   },
   {
     image: _MG_0050,
@@ -119,6 +129,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 155,
+    size: ""
   },
   {
     image: _MG_4042,
@@ -128,6 +139,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 199,
+    size: ""
   },
   {
     image: _MG_4983,
@@ -137,6 +149,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 177,
+    size: ""
   },
   {
     image: _MG_8090,
@@ -146,6 +159,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 228,
+    size: ""
   },
   {
     image: _MG_3910,
@@ -155,6 +169,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 111,
+    size: ""
   },
   {
     image: _MG_5081,
@@ -164,6 +179,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 119,
+    size: ""
   },
   {
     image: _MG_5100,
@@ -173,6 +189,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 99,
+    size: ""
   },
   {
     image: _MG_6708,
@@ -182,6 +199,7 @@ const products = [
     description:
       "Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
     price: 127,
+    size: ""
   },
 ];
 

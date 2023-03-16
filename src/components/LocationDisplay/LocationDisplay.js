@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./LocationDisplay.module.css";
 import { Link } from "react-router-dom";
-import locationPin from "../../assets/icon-svg/location-tick-svgrepo-com.svg";
+import locationPin from "../../assets/icon/location-tick-svgrepo-com.svg";
 import locationImage from "../../assets/component/locationBoutique.jpg";
 
 export default function LocationDisplay() {

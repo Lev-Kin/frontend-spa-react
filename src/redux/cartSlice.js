@@ -13,7 +13,8 @@ export const checkout = createAsyncThunk(
   }
 );
 
-//localStorage.clear();
+// ==========
+// localStorage.clear();
 
 const cartSlice = createSlice({
   name: "cart",
@@ -25,18 +26,8 @@ const cartSlice = createSlice({
     ),
   },
   reducers: {
-    sizze: (store, action) => {
-      if (store.items[action.payload]) {
-        store.items[action.payload]++;
-      } else {
-        store.items[action.payload] = 1;
-      }
-    },
-
+    //=============== i need combined reducer for image and count maybe
     add: (store, action) => {
-
-
-
       if (store.items[action.payload]) {
         store.items[action.payload]++;
       } else {
@@ -66,7 +57,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const {  sizze, add, remove, increment, decrement } =
-  cartSlice.actions;
+export const { add, remove, increment, decrement } = cartSlice.actions;
 
 export default cartSlice.reducer;

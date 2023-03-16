@@ -32,7 +32,7 @@ function Orders() {
     orders
       .filter((order) => order.idLocal === localId)
       .map((order) => {
-        // console.log(Object.values(order.id).join("")); // redy to go injection
+        // console.log(Object.values(order.id).join("")); //injection order.id
         return Object.keys(order.items).map((item) => {
           return showProducts.push(
             Object.assign(

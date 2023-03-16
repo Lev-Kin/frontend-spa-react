@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Cart from "../../assets/icon-svg/cartIcon.svg";
+import Cart from "../../assets/icon/cartIcon.svg";
 import classes from "./CartLink.module.css";
 
 export default function CartLink() {

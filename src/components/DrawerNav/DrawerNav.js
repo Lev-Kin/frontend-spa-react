@@ -2,13 +2,12 @@ import React from "react";
 import classes from "./DrawerNav.module.css";
 import NavItem from "./NavItem/NavItem";
 import { NavLink } from "react-router-dom";
-import Search from "../../assets/icon-svg/search.svg";
-import User from "../../assets/icon-svg/userIcon.svg";
-import signout from "../../assets/icon-svg/sign-in-svgrepo-com.svg";
+import User from "../../assets/icon/userIcon.svg";
+import signout from "../../assets/icon/sign-in-svgrepo-com.svg";
 import CartLink from "../CartLink/CartLink";
 import { useSelector } from "react-redux";
 
-function Nav({ callBack, toggle }) {
+function DrawerNav({ callBack, toggle }) {
   const isAuthenticated = useSelector((store) => store.auth.idToken !== null);
 
   const classNames = [classes.NavToggle];
@@ -19,9 +18,6 @@ function Nav({ callBack, toggle }) {
   return (
     <div className={classes.DrawerNav}>
       <div className={classes.iconContainer}>
-        <NavLink to="/search" className={classes.icons}>
-          <img src={Search} className={classes.searchIcon} alt="Search" />
-        </NavLink>
         {!isAuthenticated ? (
           <NavLink to="/auth" className={classes.icons}>
             <img src={User} className={classes.userIcon} alt="Account" />
@@ -32,7 +28,7 @@ function Nav({ callBack, toggle }) {
             <img src={signout} className={classes.userIcon} alt="Account" />
           </NavLink>
         ) : null}
-        <NavLink to="/cart" className={classes.icons}>
+        <NavLink to="/cart" className={classes.icons} alt="Cart">
           <CartLink />
         </NavLink>
       </div>
@@ -52,13 +48,6 @@ function Nav({ callBack, toggle }) {
           Special
         </NavItem>
         <NavItem
-          url="/delivery"
-          onClick={callBack}
-          className={classNames.join(" ")}
-        >
-          Delivery
-        </NavItem>
-        <NavItem
           url="/location"
           onClick={callBack}
           className={classNames.join(" ")}
@@ -73,7 +62,7 @@ function Nav({ callBack, toggle }) {
           About
         </NavItem>
         <NavItem
-          url="/account"
+          url="/contacts"
           onClick={callBack}
           className={classNames.join(" ")}
         >
@@ -84,4 +73,4 @@ function Nav({ callBack, toggle }) {
   );
 }
 
-export default Nav;
+export default DrawerNav;
