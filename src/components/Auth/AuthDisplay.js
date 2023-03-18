@@ -29,30 +29,33 @@ export default function AuthDisplay() {
   if (localId !== null) {
     navigate("/");
   }
-
+  
   let errorOutput = null;
   if (error) {
     errorOutput = <strong style={{ color: "red" }}>{error}</strong>;
   }
 
   return (
-    <div className={classes.Auth}>
-      <img src={image} alt="Auth" />
-      <form onSubmit={onAuthStart}>
-        <h1>Sign in</h1>
-        <p>
-          Create an account to access your profile info, order history and more.
-        </p>
-        {errorOutput}
-        <label>
-          <input type="email" name="email" placeholder="Email" />
-        </label>
-        <label>
-          <input type="password" name="password" placeholder="Password" />
-        </label>
-        <button>Sign in</button>
-        <button>Sign up</button>
-      </form>
-    </div>
+    <>
+      <div className={classes.Auth}>
+        <img src={image} alt="Auth" />
+        <form onSubmit={onAuthStart}>
+          <h1>Sign in</h1>
+          <p>
+            Create an account to access your profile info, order history and
+            more.
+          </p>
+          {errorOutput}
+          <label>
+            <input type="email" name="email" placeholder="Email" />
+          </label>
+          <label>
+            <input type="password" name="password" placeholder="Password" />
+          </label>
+          <button>Sign in</button>
+          <button>Sign up</button>
+        </form>
+      </div>
+    </>
   );
 }

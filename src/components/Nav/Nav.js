@@ -15,7 +15,7 @@ function Nav() {
     <div className={classes.Nav}>
       <ul>
         <NavItem url="/shop">Shop</NavItem>
-        <NavItem url="/special">Special days</NavItem>
+        <NavItem url="/special">Special</NavItem>
         <NavItem url="/location">Location</NavItem>
       </ul>
       <NavLink to="/" className={classes.logo}>

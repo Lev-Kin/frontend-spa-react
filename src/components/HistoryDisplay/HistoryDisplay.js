@@ -27,7 +27,7 @@ function Orders() {
   }, []);
 
   let output = <h1>Loading...</h1>;
-  console.log(orders);
+  //console.log(orders);
   if (orders !== null) {
     orders
       .filter((order) => order.idLocal === localId)
@@ -45,7 +45,7 @@ function Orders() {
         });
       });
 
-    console.log(showProducts);
+    //console.log(showProducts);
     output = showProducts.map((product) => {
       return (
         <div

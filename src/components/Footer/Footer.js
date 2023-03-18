@@ -11,16 +11,18 @@ function Footer() {
       <div className={classes.container}>
         <div className={classes.title}>
           <h3>
-            <a href="/">Luxary Feel</a>
+            <a href="/">Luxury Feel</a>
           </h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <div className={classes.form}>
-          <h4>Sign Up For Luxary News!</h4>
+          <h4>Sign Up For Luxury News!</h4>
           <form>
             <input type="email" placeholder="Email address" />
-            <button type="submit">&#8594;</button>
+            <a href="/singup" style={{ textDecorationLine: "none" }}>
+              &#8594;
+            </a>
           </form>
         </div>
         <div className={classes.pages}>

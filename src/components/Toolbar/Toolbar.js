@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../Nav/Nav";
-import NavToggle from "../Nav/NavToggle/NavToggle";
+import NavToggle from "../DrawerNav/NavToggle/NavToggle";
 import classes from "./Toolbar.module.css";
 
 function Toolbar({ toggleDrawer }) {

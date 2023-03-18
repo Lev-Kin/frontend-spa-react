@@ -2,7 +2,7 @@ import React from "react";
 import DrawerNav from "../DrawerNav/DrawerNav";
 import classes from "./Drawer.module.css";
 
-function Drawer({ open }) {
+function Drawer({ open, toggle }) {
   const classNames = [classes.Drawer];
 
   if (open) {
@@ -11,9 +11,11 @@ function Drawer({ open }) {
 
   return (
     <div className={classNames.join(" ")}>
-      <div className={classes.content}>
-        <DrawerNav />
-      </div>
+      <button onClick={toggle}>
+        <div className={classes.content}>
+          <DrawerNav callBack={toggle} />
+        </div>
+      </button>
     </div>
   );
 }

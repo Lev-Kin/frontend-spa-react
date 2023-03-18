@@ -13,8 +13,13 @@ export const checkout = createAsyncThunk(
   }
 );
 
+// draft ====
+// const itemAdapter = createEntityAdapter();
+// const initialState = itemAdapter.getInitialState();
+// =================
+
 // ==========
-// localStorage.clear();
+//localStorage.clear();
 
 const cartSlice = createSlice({
   name: "cart",
@@ -26,37 +31,55 @@ const cartSlice = createSlice({
     ),
   },
   reducers: {
-    //=============== i need combined reducer for image and count maybe
-    add: (store, action) => {
-      if (store.items[action.payload]) {
-        store.items[action.payload]++;
+    //=============== for product id identification
+    // image: (state, action) => {
+    //   state.items[action.payload] = 1;
+    // },
+
+    // for id poduct,size
+    add: (state, action) => {
+      if (state.items[action.payload]) {
+        state.items[action.payload]++;
       } else {
-        store.items[action.payload] = 1;
+        state.items[action.payload] = 1;
       }
     },
 
-    remove: (store, action) => {
-      delete store.items[action.payload];
+    remove: (state, action) => {
+      delete state.items[action.payload];
     },
-    increment: (store, action) => {
-      store.items[action.payload]++;
+    increment: (state, action) => {
+      state.items[action.payload]++;
     },
-    decrement: (store, action) => {
-      if (store.items[action.payload] > 1) {
-        store.items[action.payload]--;
+    decrement: (state, action) => {
+      if (state.items[action.payload] > 1) {
+        state.items[action.payload]--;
       } else {
-        delete store.items[action.payload];
+        delete state.items[action.payload];
       }
     },
   },
-  extraReducers: {
-    [checkout.fulfilled]: (store, action) => {
-      console.log(action);
-      store.items = {};
-    },
+
+  // draft ===--- maybe okk
+  extraReducers: (builder) => {
+    builder.addCase(checkout, (state, action) => {
+      const item = action.payload;
+      const restEntities = Object.values(state.items).filter(
+        (e) => e.item !== item
+      );
+      cartSlice.getInitialState.setAll(state, restEntities);
+    });
   },
+  // ===========
+
+  // extraReducers: {
+  //   [checkout.fulfilled]: (state, action) => {
+  //     console.log(action);
+  //     state.items = {};
+  //   },
+  // },
 });
 
-export const { add, remove, increment, decrement } = cartSlice.actions;
+export const { image, add, remove, increment, decrement } = cartSlice.actions;
 
 export default cartSlice.reducer;

@@ -9,8 +9,8 @@ import { useSelector } from "react-redux";
 
 function DrawerNav({ callBack, toggle }) {
   const isAuthenticated = useSelector((store) => store.auth.idToken !== null);
-
-  const classNames = [classes.NavToggle];
+  const classNames = [classes.DrawerNav];
+  
   if (toggle) {
     classNames.push(classes.toggle);
   }

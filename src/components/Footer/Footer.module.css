@@ -81,7 +81,7 @@ button {
 
 .Footer .container .socialLinks ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 3px;
 }
 

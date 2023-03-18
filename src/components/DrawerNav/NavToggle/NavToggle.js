@@ -3,6 +3,7 @@ import classes from "./NavToggle.module.css";
 
 function NavToggle({ callBack, toggle }) {
   const classNames = [classes.NavToggle];
+
   if (toggle) {
     classNames.push(classes.toggle);
   }

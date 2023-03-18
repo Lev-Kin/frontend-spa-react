@@ -9,7 +9,7 @@ function AboutDisplay() {
     <>
       <section className={classes.aboutSection}>
         <div className={classes.container}>
-          <h1>About Luxary Feel</h1>
+          <h1>About Luxury Feel</h1>
           <div className={classes.firstSection}>
             <div>
               <p>
