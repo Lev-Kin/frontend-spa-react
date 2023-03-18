@@ -20,7 +20,11 @@ function Footer() {
           <h4>Sign Up For Luxury News!</h4>
           <form>
             <input type="email" placeholder="Email address" />
-            <a href="/singup" style={{ textDecorationLine: "none" }}>
+            {/* <a href="/submit" style={{ textDecorationLine: "none" }}>
+              &#8594;
+            </a> */}
+
+            <a href="/notfound404" style={{ textDecorationLine: "none" }}>
               &#8594;
             </a>
           </form>
