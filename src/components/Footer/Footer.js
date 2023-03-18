@@ -24,7 +24,7 @@ function Footer() {
               &#8594;
             </a> */}
 
-            <a href="/notfound404" style={{ textDecorationLine: "none" }}>
+            <a href="/testnf" style={{ textDecorationLine: "none" }}>
               &#8594;
             </a>
           </form>

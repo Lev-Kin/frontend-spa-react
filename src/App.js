@@ -38,7 +38,7 @@ function App() {
           <Route path="/signout" element={<SignOut />} />
           <Route path="/history" element={<History />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/notfound404" element={<NotFound />} />
+          <Route path="/testnf" element={<NotFound />} />
         </Routes>
       </Layout>
     </div>
