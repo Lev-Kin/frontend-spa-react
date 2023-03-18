@@ -16,6 +16,7 @@ import Checkout from "./pages/Checkout";
 import Auth from "./pages/Auth";
 import SignOut from "./pages/SignOut";
 import History from "./pages/History";
+import TestNf from "./pages/TestNf";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
           <Route path="/signout" element={<SignOut />} />
           <Route path="/history" element={<History />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/testnf" element={<NotFound />} />
+          <Route path="/testnf" element={<TestNf />} />
         </Routes>
       </Layout>
     </div>
