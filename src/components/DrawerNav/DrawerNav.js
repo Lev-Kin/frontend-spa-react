@@ -10,22 +10,32 @@ import { useSelector } from "react-redux";
 function DrawerNav({ callBack, toggle }) {
   const isAuthenticated = useSelector((store) => store.auth.idToken !== null);
   const classNames = [classes.DrawerNav];
-  
+
   if (toggle) {
     classNames.push(classes.toggle);
   }
+
+
 
   return (
     <div className={classes.DrawerNav}>
       <div className={classes.iconContainer}>
         {!isAuthenticated ? (
-          <NavLink to="/auth" className={classes.icons}>
+          <NavLink
+            to={{ pathname: "/auth" }}
+            state={{ authlink: isAuthenticated }}
+            className={classes.icons}
+          >
             <img src={User} className={classes.userIcon} alt="Account" />
           </NavLink>
         ) : null}
         {isAuthenticated ? (
-          <NavLink to="/signout" className={classes.icons}>
-            <img src={signout} className={classes.userIcon} alt="Account" />
+          <NavLink
+            to={{ pathname: "/signout" }}
+            state={{ signoutlink: isAuthenticated }}
+            className={classes.icons}
+          >
+            <img src={signout} className={classes.userIcon} alt="Singout" />
           </NavLink>
         ) : null}
         <NavLink to="/cart" className={classes.icons} alt="Cart">

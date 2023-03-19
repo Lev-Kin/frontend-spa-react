@@ -95,7 +95,7 @@ function CheckoutDisplay() {
               />
             </label>
             <label>
-              <input type="text" name="phone" placeholder="Phone" required />
+              <input type="number" name="phone" placeholder="Phone" required />
             </label>
             <button>Complete the order</button>
           </form>

@@ -36,10 +36,10 @@ function Orders() {
         return Object.keys(order.items).map((item) => {
           return showProducts.push(
             Object.assign(
+              { idOrder: order.id },
               allProducts[
                 allProducts.findIndex((product) => product.productId === item)
-              ],
-              { idOrder: order.id }
+              ]
             )
           );
         });
@@ -49,7 +49,7 @@ function Orders() {
     output = showProducts.map((product) => {
       return (
         <div
-          key={product.productId}
+          key={product.idOrder + product.productId}
           className={classes.HistoryDisplay}
           idorderprop={product.idOrder}
         >

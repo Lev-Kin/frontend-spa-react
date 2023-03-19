@@ -25,13 +25,21 @@ function Nav() {
         <NavItem url="/about">About</NavItem>
         <NavItem url="/contacts">Contacts</NavItem>
         {!isAuthenticated ? (
-          <NavLink to="/auth" className={classes.icons}>
+          <NavLink
+            to={{ pathname: "/auth" }}
+            state={{ asignoutlink: isAuthenticated }}
+            className={classes.icons}
+          >
             <img src={User} className={classes.userIcon} alt="Account" />
           </NavLink>
         ) : null}
         {isAuthenticated ? (
-          <NavLink to="/signout" className={classes.icons}>
-            <img src={signout} className={classes.userIcon} alt="Account" />
+          <NavLink
+            to={{ pathname: "/signout" }}
+            state={{ signoutlink: isAuthenticated }}
+            className={classes.icons}
+          >
+            <img src={signout} className={classes.userIcon} alt="Singout" />
           </NavLink>
         ) : null}
         <NavLink to="/cart" className={classes.icons}>

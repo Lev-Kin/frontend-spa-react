@@ -13,6 +13,18 @@ export const checkout = createAsyncThunk(
   }
 );
 
+export const setAside = createAsyncThunk(
+  "signout",
+  async (order, thunkAPI) => {
+    const response = await axios.post(
+      "https://test-firebase-d7b5e-default-rtdb.firebaseio.com/setasidecart.json",
+      order
+    );
+
+    return response.data;
+  }
+);
+
 // draft ====
 // const itemAdapter = createEntityAdapter();
 // const initialState = itemAdapter.getInitialState();
@@ -60,26 +72,30 @@ const cartSlice = createSlice({
     },
   },
 
-  // draft ===--- maybe okk
-  extraReducers: (builder) => {
-    builder.addCase(checkout, (state, action) => {
-      const item = action.payload;
-      const restEntities = Object.values(state.items).filter(
-        (e) => e.item !== item
-      );
-      cartSlice.getInitialState.setAll(state, restEntities);
-    });
-  },
+  // draft ===--- need but not work
+  // extraReducers: (builder) => {
+  //   builder.addCase(checkout, (state, action) => {
+  //     const item = action.payload;
+  //     const restEntities = Object.values(state.items).filter(
+  //       (e) => e.item !== item
+  //     );
+  //     cartSlice.getInitialState.setAll(state, restEntities);
+  //   });
+  // },
   // ===========
 
-  // extraReducers: {
-  //   [checkout.fulfilled]: (state, action) => {
-  //     console.log(action);
-  //     state.items = {};
-  //   },
-  // },
+  // obsolete === old
+  extraReducers: {
+    [checkout.fulfilled]: (state, action) => {
+      console.log(action);
+      state.items = {};
+    },
+
+    
+  },
+  // =====
 });
 
-export const { image, add, remove, increment, decrement } = cartSlice.actions;
+export const { add, remove, increment, decrement } = cartSlice.actions;
 
 export default cartSlice.reducer;
