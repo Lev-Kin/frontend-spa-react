@@ -91,6 +91,16 @@ const cartSlice = createSlice({
       state.items = {};
     },
 
+    [setAside.fulfilled]: (state, action) => {
+
+      console.log(action);
+      console.log( Object.keys(action.meta.arg));
+
+      console.log(state);
+     // state.items = {};
+    },
+
+    
     
   },
   // =====

@@ -14,17 +14,14 @@ export default function SignOut() {
     localId: store.auth.localId,
   }));
 
-  // if use React.StrictMode need off because render 2 times
-  //  (if on production in React.StrictMode 1 time)
-  // useEffect(() => {
-
-  // }, [state.signoutlink]);
-
-  // work -- old
+  console.log(localId);
+  // work -- n 22 48 19.08
   useEffect(() => {
     // if use React.StrictMode need off because render 2 time
     // (state.signoutlink)
     //  (if on production in React.StrictMode 1 time)
+
+    
     if (state.signoutlink && Object.keys(items).length !== 0) {
       const setCart = {
         date: new Date(),
@@ -37,7 +34,7 @@ export default function SignOut() {
 
     dispatch({ type: "auth/init" });
     navigate("/");
-  }, [dispatch, navigate, state.signoutlink, items, localId]);
+  }, [dispatch, navigate, state.signoutlink]);
 
   return "qwerty";
 }
