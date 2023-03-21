@@ -5,21 +5,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import classes from "./AuthDisplay.module.css";
 import image from "../../assets/component/deliveryHeader-img.jpg";
-//import { getProducts } from "../../data/products";
+import { addaside } from "../../redux/cartSlice";
+import { getProducts } from "../../data/products";
 
 export default function AuthDisplay() {
   const [asideProducts, setAsideCart] = useState(null);
   const { error, localId, loading } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const allProducts = getProducts();
-  // let pushProduct = [];
-
+  let asideProductUserId = [];
+  const allProducts = getProducts();
 
   function onAuthStart(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-
     dispatch(
       start({
         email: formData.get("email"),
@@ -56,33 +55,51 @@ export default function AuthDisplay() {
           });
           console.log(cartItems);
           setAsideCart(cartItems);
+        })
+        .catch((error) => {
+          console.error(error);
         });
     }
   }, [loading]);
 
-/// im Here 19.3  ==================================== need to add dispatch - cart
+  /// im Here work - cart
   if (asideProducts !== null) {
     asideProducts
       .filter((asideProduct) => asideProduct.idLocal === localId)
       .map((asideProduct) => {
-
- 
-        console.log(asideProduct)
-
-        return asideProduct;
-
-        // // console.log(Object.values(order.id).join("")); //injection order.id
+        console.log(asideProduct);
+        return Object.keys(asideProduct.items).map((item) => {
+          return asideProductUserId.push(
+            allProducts[
+              allProducts.findIndex((product) => product.productId === item)
+            ]
+          );
+        });
+        // work ---
         // return Object.keys(asideProduct.items).map((item) => {
-        //   return pushProduct.push(
-        //     Object.assign(
-        //       allProducts[
-        //         allProducts.findIndex((product) => product.productId === item)
-        //       ]
-        //     )
-        //   );
+        //   return dispatch(addaside(item));
         // });
       });
+  }
+
+  console.log(asideProductUserId);
+  // ===
+  if (asideProductUserId.length > 0) {
+    // 2
+    for (let i = 0; i < asideProductUserId.length; i++) {
+      dispatch(addaside(asideProductUserId[i]["productId"]));
     }
+
+    // work but add more 1
+    // asideProductUserId.forEach((element) =>
+    //   Object.keys(element).forEach((key) => {
+    //     if (key === "productId") {
+    //       console.log(element[key]);
+    //       dispatch(addaside(element[key]));
+    //     }
+    //   })
+    // );
+  }
 
   return (
     <>

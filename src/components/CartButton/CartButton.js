@@ -18,22 +18,19 @@ export default function CartButton({ productId, price }) {
 
   function onAddToCart() {
     // for one product ----
+    console.log(productId);
     dispatch(add(productId));
     // ====================
 
     // draft
     // let json = `{productId:${productId}, size:${size}`;
     //dispatch(add(json));
-    // dispatch(add([[productId], [size]]));
     // =========--------------
 
     // OK ===
     // dispatch(image(productId));
     // dispatch(add(`${productId},${size}`));
     //============
-
-    // console.log(productId);
-    // console.log(size);
 
     setAdd(count + 1);
   }

@@ -11,31 +11,8 @@ function CartDisplay() {
   const dispatch = useDispatch();
   const products = getProducts();
 
-  // ====-> draft
-  // const keys = Object.keys(items);
-  // let pId = Object.values(products).find((e) => e.productId).productId;
-  // console.log(Object.values(products).find((e) => e.productId).productId);
-  // console.log(Object.keys(items));
-  // console.log(items);
-
-  // let itemsNew = Object.assign(items);
-  // for (const [key, value] of Object.entries(itemsNew)) {
-  //   console.log(`${key}: ${value}`);
-  // }
-
-  // console.log(
-  //   JSON.stringify(itemsNew, function replacer(key, value) {
-  //     if (typeof value === "string") {
-  //       return undefined;
-  //     }
-  //     return value;
-  //   })
-  // );
-
-  // console.log(aaa);
-  // console.log(products);
-  //=============================
-
+  console.log(items);
+ 
   let total = 0;
   let output = products
     .filter((product) => items[product.productId])
@@ -50,9 +27,6 @@ function CartDisplay() {
 
       // OK =====
       // product["size"] = Object.keys(items)
-      //   //.toString()
-      //   // .split(",")
-      //   // .match(`${product.productId}/g`)
       //   .filter((item) =>
       //     item.match(
       //       `${product.productId},S
@@ -63,26 +37,6 @@ function CartDisplay() {
       //     )
       //   );
       //===========================
-
-      // nope ---
-      // .filter((item) => item.length <= 2)
-
-      // product.size.
-      // console.log(typeof product.size)
-
-      //     for (let [key, value] of Object.entries(product.size)) {
-      //     console.log(`${key}: ${value}`);
-      // value = + 1111;
-
-      //     console.log(`${key}: ${value}`);
-      //   }
-
-      //  product["size"] = Object.keys('size').forEach((i) => i + "11111")
-      //===================================
-
-      // console.log(product.size);
-      // console.log(product);
-      // console.log(Object.values(product.size));
 
       // OK =====
       // for (const key in product.size) {

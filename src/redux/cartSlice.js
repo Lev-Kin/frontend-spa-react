@@ -15,22 +15,17 @@ export const checkout = createAsyncThunk(
 
 export const setAside = createAsyncThunk(
   "signout",
-  async (order, thunkAPI) => {
+  async (delayed, thunkAPI) => {
     const response = await axios.post(
       "https://test-firebase-d7b5e-default-rtdb.firebaseio.com/setasidecart.json",
-      order
+      delayed
     );
 
     return response.data;
   }
 );
 
-// draft ====
-// const itemAdapter = createEntityAdapter();
-// const initialState = itemAdapter.getInitialState();
-// =================
-
-// ==========
+// ========== ///==== ///
 //localStorage.clear();
 
 const cartSlice = createSlice({
@@ -42,6 +37,7 @@ const cartSlice = createSlice({
         : "{}"
     ),
   },
+
   reducers: {
     //=============== for product id identification
     // image: (state, action) => {
@@ -55,6 +51,16 @@ const cartSlice = createSlice({
       } else {
         state.items[action.payload] = 1;
       }
+    },
+
+    addaside: (state, action) => {
+    
+      if (state.items[action.payload] !== undefined) {
+        state.items[action.payload]++;
+      } else {
+        state.items[action.payload] = Number(1);
+      }
+
     },
 
     remove: (state, action) => {
@@ -92,20 +98,19 @@ const cartSlice = createSlice({
     },
 
     [setAside.fulfilled]: (state, action) => {
-
-      console.log(action);
-      console.log( Object.keys(action.meta.arg));
-
-      console.log(state);
-     // state.items = {};
+      // console.log(  action ) ;
+      // console.log( state);
+      // console.log(action.payload.name)
+      // if( state.id === action.payload.name){
+      //   console("dsafasdf")
+      // }
+      // state.items = {};
     },
-
-    
-    
   },
   // =====
 });
 
-export const { add, remove, increment, decrement } = cartSlice.actions;
+export const { addaside, add, remove, increment, decrement } =
+  cartSlice.actions;
 
 export default cartSlice.reducer;
