@@ -15,6 +15,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Auth from "./pages/Auth";
 import SignOut from "./pages/SignOut";
+import SignIn from "./pages/SignIn";
 import History from "./pages/History";
 import TestNf from "./pages/TestNf";
 
@@ -37,6 +38,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/signout" element={<SignOut />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/history" element={<History />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/testnf" element={<TestNf />} />

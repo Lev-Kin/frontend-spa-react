@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../data/products";
 import classes from "./CartButton.module.css";
-import {  add } from "../../redux/cartSlice";
+import { add } from "../../redux/cartSlice";
 
 export default function CartButton({ productId, price }) {
   const [size, setSize] = useState("");
@@ -18,11 +18,11 @@ export default function CartButton({ productId, price }) {
 
   function onAddToCart() {
     // for one product ----
-    console.log(productId);
+    //console.log(productId);
     dispatch(add(productId));
     // ====================
 
-    // draft
+    // draft/ not json. better use object
     // let json = `{productId:${productId}, size:${size}`;
     //dispatch(add(json));
     // =========--------------

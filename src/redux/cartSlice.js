@@ -47,6 +47,7 @@ const cartSlice = createSlice({
     // for id poduct,size
     add: (state, action) => {
       if (state.items[action.payload]) {
+        console.log(action.payload);
         state.items[action.payload]++;
       } else {
         state.items[action.payload] = 1;
@@ -55,11 +56,11 @@ const cartSlice = createSlice({
 
     addaside: (state, action) => {
     
-      if (state.items[action.payload] !== undefined) {
+      //if (state.items[action.payload] !== undefined) {
         state.items[action.payload]++;
-      } else {
-        state.items[action.payload] = Number(1);
-      }
+      // } else {
+      //   state.items[action.payload] = Number(1);
+      // }
 
     },
 
@@ -67,6 +68,7 @@ const cartSlice = createSlice({
       delete state.items[action.payload];
     },
     increment: (state, action) => {
+      console.log(action.payload);
       state.items[action.payload]++;
     },
     decrement: (state, action) => {
@@ -97,7 +99,7 @@ const cartSlice = createSlice({
       state.items = {};
     },
 
-    [setAside.fulfilled]: (state, action) => {
+   // [setAside.fulfilled]: (state, action) => {
       // console.log(  action ) ;
       // console.log( state);
       // console.log(action.payload.name)
@@ -105,7 +107,7 @@ const cartSlice = createSlice({
       //   console("dsafasdf")
       // }
       // state.items = {};
-    },
+   // },
   },
   // =====
 });
