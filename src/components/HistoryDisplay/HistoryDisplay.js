@@ -21,18 +21,15 @@ function Orders() {
         const newItems = Object.keys(data).map((id) => {
           return { id, ...data[id] };
         });
-        // console.log(newItems);
         setOrders(newItems);
       });
   }, []);
 
   let output = <h1>Loading...</h1>;
-  //console.log(orders);
   if (orders !== null) {
     orders
       .filter((order) => order.idLocal === localId)
       .map((order) => {
-        // console.log(Object.values(order.id).join("")); //injection order.id
         return Object.keys(order.items).map((item) => {
           return showProducts.push(
             Object.assign(
@@ -45,7 +42,6 @@ function Orders() {
         });
       });
 
-    //console.log(showProducts);
     output = showProducts.map((product) => {
       return (
         <div

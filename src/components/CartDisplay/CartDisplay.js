@@ -11,38 +11,11 @@ function CartDisplay() {
   const dispatch = useDispatch();
   const products = getProducts();
 
-  console.log(items);
- 
   let total = 0;
   let output = products
     .filter((product) => items[product.productId])
     .map((product) => {
-      //=== one count prodid --
       total += product.price * items[product.productId];
-
-      // console.log(items);
-      // console.log(Object.keys(items));
-      // console.log(typeof product.productId);
-      // console.log(product);
-
-      // OK =====
-      // product["size"] = Object.keys(items)
-      //   .filter((item) =>
-      //     item.match(
-      //       `${product.productId},S
-      //       |${product.productId},M
-      //       |${product.productId},L
-      //       |${product.productId},XL
-      //       |${product.productId},`
-      //     )
-      //   );
-      //===========================
-
-      // OK =====
-      // for (const key in product.size) {
-      //   total += product.price * items[product.size[key]];
-      // }
-      // ===========
 
       return (
         <div key={product.productId} className={classes.item}>
@@ -57,7 +30,6 @@ function CartDisplay() {
               className={classes.productImage}
             />
             <div>{product.title}</div>
-            {/* <div>Size 1213</div> */}
           </Link>
           <div>
             <button

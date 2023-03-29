@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { start } from "../../redux/authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -6,7 +6,7 @@ import classes from "./AuthDisplay.module.css";
 import image from "../../assets/component/deliveryHeader-img.jpg";
 
 export default function AuthDisplay() {
-  const { error, localId, loading } = useSelector((store) => store.auth);
+  const { error, localId } = useSelector((store) => store.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -29,10 +29,6 @@ export default function AuthDisplay() {
   if (error) {
     errorOutput = <strong style={{ color: "red" }}>{error}</strong>;
   }
-
-  // if (localId !== null && !loading) {
-  //   navigate("/signin");
-  // }
 
   useEffect(() => {
     if (localId !== null) {

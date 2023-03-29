@@ -14,13 +14,11 @@ export default function SignOut() {
     localId: store.auth.localId,
   }));
 
-  // work -- n 22 48 19.08
+  // work
   useEffect(() => {
     // if use React.StrictMode need off because render 2 time
     // (state.signoutlink)
     //  (if on production in React.StrictMode 1 time)
-    console.log(localId);
-
     if (
       state.signoutlink &&
       Object.keys(items).length !== 0 &&

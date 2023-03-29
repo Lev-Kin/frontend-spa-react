@@ -44,9 +44,6 @@ function CheckoutDisplay() {
 
   function onCheckout(event) {
     event.preventDefault();
-    //
-    //======================================= idLocal: localId
-    // =====->
     const formData = new FormData(event.target);
     const order = {
       idLocal: localId,

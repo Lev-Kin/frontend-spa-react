@@ -17,21 +17,7 @@ export default function CartButton({ productId, price }) {
   }
 
   function onAddToCart() {
-    // for one product ----
-    //console.log(productId);
     dispatch(add(productId));
-    // ====================
-
-    // draft/ not json. better use object
-    // let json = `{productId:${productId}, size:${size}`;
-    //dispatch(add(json));
-    // =========--------------
-
-    // OK ===
-    // dispatch(image(productId));
-    // dispatch(add(`${productId},${size}`));
-    //============
-
     setAdd(count + 1);
   }
 

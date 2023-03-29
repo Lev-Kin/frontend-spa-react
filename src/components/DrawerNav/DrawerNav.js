@@ -15,8 +15,6 @@ function DrawerNav({ callBack, toggle }) {
     classNames.push(classes.toggle);
   }
 
-
-
   return (
     <div className={classes.DrawerNav}>
       <div className={classes.iconContainer}>
