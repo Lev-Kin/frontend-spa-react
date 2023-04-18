@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import headerImage from "../assets/component/shopHeader-img.jpg";
+import headerImage from "../assets/component/shopHeader-img-ai.jpg";
 import CategoryList from "../components/CategoryList/CategoryList";
 import { getCategories } from "../data/categories";
 

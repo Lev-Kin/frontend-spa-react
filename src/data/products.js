@@ -1,24 +1,24 @@
-import _MG_0063 from "../assets/category/coat/_MG_0063.jpg";
-import _MG_0293 from "../assets/category/coat/_MG_0293.jpg";
-import _MG_0352 from "../assets/category/coat/_MG_0352.jpg";
-import _MG_0477 from "../assets/category/coat/_MG_0477.jpg";
-import _MG_0490 from "../assets/category/coat/_MG_0490.jpg";
-import _MG_6223 from "../assets/category/coat/_MG_6223.jpg";
+import _MG_0063 from "../assets/category/coat/_MG_0063ai.jpg";
+import _MG_0293 from "../assets/category/coat/_MG_0293ai.jpg";
+import _MG_0352 from "../assets/category/coat/_MG_0352ai.jpg";
+import _MG_0477 from "../assets/category/coat/_MG_0477ai.jpg";
+import _MG_0490 from "../assets/category/coat/_MG_0490ai.jpg";
+import _MG_6223 from "../assets/category/coat/_MG_6223ai.jpg";
 
-import _MG_135002705 from "../assets/category/dress/_MG_135002705.jpg";
-import _MG_202112540 from "../assets/category/dress/_MG_202112540.jpg";
-import _MG_219924598 from "../assets/category/dress/_MG_219924598.jpg";
-import _MG_442062354 from "../assets/category/dress/_MG_442062354.jpg";
+import _MG_135002705 from "../assets/category/dress/_MG_135002705ai.jpg";
+import _MG_202112540 from "../assets/category/dress/_MG_202112540ai.jpg";
+import _MG_219924598 from "../assets/category/dress/_MG_219924598ai.jpg";
+import _MG_442062354 from "../assets/category/dress/_MG_442062354ai.jpg";
 
-import _MG_0050 from "../assets/category/short-coat/_MG_0050.jpg";
-import _MG_4983 from "../assets/category/short-coat/_MG_4983.jpg";
-import _MG_8090 from "../assets/category/short-coat/_MG_8090.jpg";
-import _MG_4042 from "../assets/category/short-coat/_MG_4042.jpg";
+import _MG_0050 from "../assets/category/short-coat/_MG_0050ai.jpg";
+import _MG_4983 from "../assets/category/short-coat/_MG_4983ai.jpg";
+import _MG_8090 from "../assets/category/short-coat/_MG_8090ai.jpg";
+import _MG_4042 from "../assets/category/short-coat/_MG_4042ai.jpg";
 
-import _MG_3910 from "../assets/category/trench-coat/_MG_3910.jpg";
-import _MG_5081 from "../assets/category/trench-coat/_MG_5081.jpg";
-import _MG_5100 from "../assets/category/trench-coat/_MG_5100.jpg";
-import _MG_6708 from "../assets/category/trench-coat/_MG_6708.jpg";
+import _MG_3910 from "../assets/category/trench-coat/_MG_3910ai.jpg";
+import _MG_5081 from "../assets/category/trench-coat/_MG_5081ai.jpg";
+import _MG_5100 from "../assets/category/trench-coat/_MG_5100ai.jpg";
+import _MG_6708 from "../assets/category/trench-coat/_MG_6708ai.jpg";
 
 const products = [
   {

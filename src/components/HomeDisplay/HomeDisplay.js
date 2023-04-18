@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./HomeDisplay.module.css";
-import strong from "../../assets/component/right-header-strong.jpg";
-import unigue from "../../assets/component/center-header-unique.jpg";
-import quality from "../../assets/component/left-header-quality.jpg";
+import strong from "../../assets/component/right-header-strong-ai.jpg";
+import unigue from "../../assets/component/center-header-unique-ai.jpg";
+import quality from "../../assets/component/left-header-quality-ai.jpg";
 import CategoryList from "../CategoryList/CategoryList";
 import { getCategories } from "../../data/categories";
 

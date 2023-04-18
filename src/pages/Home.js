@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import headerImage from "../assets/component/header-img1.jpg";
+import headerImage from "../assets/component/header-img1-ai.jpg";
 import HomeDisplay from "../components/HomeDisplay/HomeDisplay";
 
 function Home() {

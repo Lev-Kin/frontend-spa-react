@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import headerImage from "../assets/component/shopHeader-img.jpg";
+import headerImage from "../assets/component/shopHeader-img-ai.jpg";
 import ShopDisplay from "../components/ShopDisplay/ShopDisplay";
 
 function Shop() {

@@ -1,7 +1,7 @@
-import coatCategory from "../assets/category/_MG_5110.jpg";
-import shortCoatCategory from "../assets/category/IMG_4042.jpg";
-import trenchCoatCategory from "../assets/category/_MG_5081.jpg";
-import dressCategory from "../assets/category/908934.jpg";
+import coatCategory from "../assets/category/_MG_5110ai.jpg";
+import shortCoatCategory from "../assets/category/IMG_4042ai.jpg";
+import trenchCoatCategory from "../assets/category/_MG_5081ai.jpg";
+import dressCategory from "../assets/category/908934ai.jpg";
 
 const categories = [
   {
